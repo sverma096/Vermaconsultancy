@@ -521,7 +521,7 @@ footer{border-top:1px solid var(--gold-border);padding:3.5rem 6%;display:grid;gr
       </div>
       <div class="contact-items">
         <div class="c-item reveal d1"><div class="c-icon">📞</div><div><h4>Phone / WhatsApp</h4><p><a href="tel:+918707401846">+91 87074 01846</a></p></div></div>
-        <div class="c-item reveal d2"><div class="c-icon">✉️</div><div><h4>Email</h4><p><a href="mailto:info@vermaconsultancy.com">info@vermaconsultancy.com</a></p></div></div>
+        <div class="c-item reveal d2"><div class="c-icon">✉️</div><div><h4>Email</h4><p><a href="mailto:svtiger543939@gmail.com">svtiger543939@gmail.com</a></p></div></div>
         <div class="c-item reveal d3"><div class="c-icon">🕐</div><div><h4>Working Hours</h4><p>Monday – Saturday: 10:00 AM – 7:00 PM</p></div></div>
         <div class="c-item reveal d4"><div class="c-icon">📍</div><div><h4>Location</h4><p>Lucknow, Uttar Pradesh, India</p></div></div>
       </div>
@@ -529,7 +529,7 @@ footer{border-top:1px solid var(--gold-border);padding:3.5rem 6%;display:grid;gr
     <div class="reveal d2">
       <div class="cf-box">
         <div class="cf-title">Send Us a Message</div>
-        <div class="cf-sub">This form remains simple in the uploaded site. It can later be connected to email, Google Sheets or a lead dashboard.</div>
+        <div class="cf-sub">Fill in the form below. Your enquiry will be sent directly to our email and WhatsApp.</div>
         <div class="form-row">
           <div class="fg"><label>First Name</label><input type="text" placeholder="Rajesh"></div>
           <div class="fg"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
@@ -622,7 +622,47 @@ const io=new IntersectionObserver(entries=>{
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 function submitForm(){
-  alert('✅ Thank you for reaching out!\n\nYour enquiry has been received. We will connect with you shortly.\n\n— Verma Consultancy Services\n📞 +91 87074 01846');
+  // Collect form values
+  var inputs = document.querySelectorAll('#contact input, #contact select, #contact textarea');
+  var firstName = inputs[0] ? inputs[0].value.trim() : '';
+  var lastName  = inputs[1] ? inputs[1].value.trim() : '';
+  var mobile    = inputs[2] ? inputs[2].value.trim() : '';
+  var email     = inputs[3] ? inputs[3].value.trim() : '';
+  var service   = inputs[4] ? inputs[4].value.trim() : '';
+  var message   = inputs[5] ? inputs[5].value.trim() : '';
+
+  if(!firstName && !mobile && !message){
+    alert('Please fill in at least your name, mobile number and message before submitting.');
+    return;
+  }
+
+  var fullName = (firstName + ' ' + lastName).trim();
+
+  // --- 1. Open mailto link (sends to your email) ---
+  var emailSubject = encodeURIComponent('New Enquiry from Website – ' + (fullName || 'Visitor'));
+  var emailBody = encodeURIComponent(
+    'Name: ' + (fullName || 'Not provided') + '\n' +
+    'Mobile: ' + (mobile || 'Not provided') + '\n' +
+    'Email: ' + (email || 'Not provided') + '\n' +
+    'Service Required: ' + (service || 'Not specified') + '\n\n' +
+    'Message:\n' + (message || 'No message')
+  );
+  window.open('mailto:svtiger543939@gmail.com?subject=' + emailSubject + '&body=' + emailBody, '_blank');
+
+  // --- 2. Open WhatsApp with enquiry details ---
+  var waText = encodeURIComponent(
+    '📋 *New Website Enquiry*\n\n' +
+    '👤 *Name:* ' + (fullName || 'Not provided') + '\n' +
+    '📱 *Mobile:* ' + (mobile || 'Not provided') + '\n' +
+    '📧 *Email:* ' + (email || 'Not provided') + '\n' +
+    '🔧 *Service:* ' + (service || 'Not specified') + '\n\n' +
+    '💬 *Message:*\n' + (message || 'No message')
+  );
+  setTimeout(function(){
+    window.open('https://wa.me/918707401846?text=' + waText, '_blank');
+  }, 500);
+
+  alert('✅ Thank you, ' + (firstName || 'there') + '!\n\nYour enquiry is being sent to our email and WhatsApp. We will get back to you shortly.\n\n— Verma Consultancy Services');
 }
 document.querySelectorAll('a[href*="wa.me"]').forEach(link=>{
   link.addEventListener('click',()=>{ console.log('WhatsApp lead clicked'); });
