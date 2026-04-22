@@ -3,670 +3,811 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verma Consultancy Services | GST, ITR, Payroll, PF, ESI & Compliance Experts</title>
-<meta name="description" content="Verma Consultancy Services provides ITR filing, GST filing, GST registration, accounting, bookkeeping, payroll, PF, ESI, ROC compliance, audit, and tax litigation support for individuals and businesses in Lucknow.">
-<meta name="keywords" content="ITR Filing Lucknow, GST Filing near me, GST Registration Lucknow, Payroll Services Lucknow, PF ESI Compliance, ROC Compliance, Income Tax Litigation, GST Litigation">
+<title>Verma Consultancy Services | Tax, Audit, Advisory & Compliance</title>
+<meta name="description" content="Verma Consultancy Services — professional advisory in Income Tax, GST, Audit, Payroll, PF/ESI, ROC Compliance and Litigation Support for businesses and individuals across Lucknow and UP.">
+<meta name="keywords" content="ITR Filing Lucknow, GST Filing Lucknow, GST Registration, Payroll Services, PF ESI Compliance, ROC Compliance, Income Tax Audit, GST Litigation">
 <meta name="robots" content="index, follow">
-<meta name="author" content="Verma Consultancy Services">
-<meta property="og:title" content="Verma Consultancy Services | Tax, Payroll & Compliance Experts">
-<meta property="og:description" content="Professional GST, ITR, accounting, payroll, PF, ESI, ROC, audit and litigation services for businesses and professionals.">
-<meta property="og:type" content="website">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy: #f6f1e8;
-  --navy-mid: #fffdf9;
-  --navy-card: #ffffff;
-  --gold: #b99233;
-  --gold-light: #dcc173;
-  --gold-dim: rgba(185,146,51,0.08);
-  --gold-border: rgba(185,146,51,0.22);
-  --white: #111111;
-  --off-white: #222222;
-  --muted: #5f5f5f;
-  --success: #1f8b4c;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'DM Sans', sans-serif;
-  --ease: cubic-bezier(0.22,1,0.36,1);
+  --ink:       #0a0d14;
+  --ink-mid:   #111827;
+  --ink-card:  #161c28;
+  --ink-line:  rgba(255,255,255,.08);
+  --gold:      #c9aa5c;
+  --gold-lt:   #e2cc88;
+  --gold-dim:  rgba(201,170,92,.09);
+  --gold-bdr:  rgba(201,170,92,.2);
+  --white:     #f5f3ee;
+  --muted:     #8a8fa0;
+  --accent:    #3b6ef5;
+  --success:   #2ec27a;
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'Outfit', sans-serif;
+  --ease:      cubic-bezier(0.22,1,0.36,1);
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:var(--font-sans);background:linear-gradient(180deg,#faf7f2 0%,#f3ede2 100%);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-a{text-decoration:none;color:inherit;}
-.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s var(--ease),transform .75s var(--ease);}
-.reveal.visible{opacity:1;transform:none;}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-.btn-primary,.btn-secondary,.chip,.cat-link,.svc-mini-btn{transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s,color .2s,border-color .2s,opacity .2s}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:.88rem 2rem;border-radius:8px;font-weight:700;font-size:.93rem;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(201,168,76,.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(201,168,76,.45)}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--gold-border);color:var(--white);padding:.88rem 2rem;border-radius:8px;font-weight:500;font-size:.93rem;background:transparent;cursor:pointer}
-.btn-secondary:hover{border-color:var(--gold);background:var(--gold-dim);transform:translateY(-2px)}
-.btn-group{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
-.sw{padding:6rem 6%}
-.section-tag{display:inline-block;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin-bottom:.9rem}
-.section-title{font-family:var(--font-serif);font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:800;line-height:1.18;margin-bottom:.9rem}
-.section-sub{color:var(--muted);font-size:.97rem;line-height:1.78;max-width:700px}
-.sh{margin-bottom:3.5rem}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--ink);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ── UTIL ── */
+.sw{padding:6rem 7%}
+.tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.h2{font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:600;line-height:1.15;color:var(--white)}
+.h2 em{font-style:italic;color:var(--gold)}
+.sub{color:var(--muted);font-size:.95rem;line-height:1.85;max-width:680px}
+.sh{margin-bottom:4rem}
 .center{text-align:center}
-.center .section-sub{margin-inline:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 6%;background:rgba(255,253,249,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--gold-border);box-shadow:0 10px 40px rgba(60,40,10,.06);transition:padding .3s}
-nav.scrolled{padding:.8rem 6%}
-.nav-logo{display:flex;align-items:center;gap:12px}
-.logo-mark{width:42px;height:42px;flex-shrink:0;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:900;font-size:1.2rem;color:var(--navy)}
-.logo-words strong{font-family:var(--font-serif);font-size:1rem;font-weight:700;color:var(--white);display:block;line-height:1.3}
-.logo-words span{font-size:.67rem;font-weight:500;color:var(--gold);letter-spacing:.13em;text-transform:uppercase}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{color:#333;font-size:.85rem;font-weight:600}
+.center .sub{margin-inline:auto}
+.gold{color:var(--gold)}
+.line-gold{display:inline-block;width:40px;height:2px;background:var(--gold);vertical-align:middle;margin-right:.8rem}
+
+/* ── BUTTONS ── */
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--ink);padding:.78rem 2rem;border-radius:4px;font-weight:700;font-size:.85rem;letter-spacing:.04em;border:none;cursor:pointer;transition:all .25s var(--ease)}
+.btn-p:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,170,92,.35)}
+.btn-s{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold-bdr);color:var(--white);padding:.78rem 2rem;border-radius:4px;font-weight:500;font-size:.85rem;background:transparent;cursor:pointer;transition:all .25s var(--ease)}
+.btn-s:hover{border-color:var(--gold);background:var(--gold-dim);transform:translateY(-2px)}
+.btn-grp{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:1.3rem 7%;transition:all .35s var(--ease);background:transparent}
+nav.scrolled{background:rgba(10,13,20,.95);backdrop-filter:blur(16px);padding:1rem 7%;border-bottom:1px solid var(--ink-line)}
+.nav-logo{display:flex;align-items:center;gap:14px}
+.logo-mark{width:40px;height:40px;border:1.5px solid var(--gold);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--gold)}
+.logo-txt strong{font-family:var(--serif);font-size:1.05rem;font-weight:600;letter-spacing:.03em;display:block;line-height:1.2}
+.logo-txt span{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:rgba(245,243,238,.75);font-size:.8rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
 .nav-right{display:flex;align-items:center;gap:1.2rem}
-.nav-phone{font-size:.82rem;font-weight:600;color:var(--gold)}
-.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:.52rem 1.3rem;border-radius:7px;font-weight:700;font-size:.84rem}
-.nav-cta:hover{opacity:.85;transform:translateY(-1px)}
+.nav-ph{font-size:.78rem;color:var(--gold);font-weight:600;letter-spacing:.05em}
+.nav-cta{background:var(--gold);color:var(--ink);padding:.5rem 1.2rem;border-radius:3px;font-size:.78rem;font-weight:700;letter-spacing:.06em;transition:all .2s}
+.nav-cta:hover{background:var(--gold-lt)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px}
-.mobile-menu{display:none;position:fixed;inset:0;z-index:190;background:var(--navy-mid);padding:6rem 6% 3rem;flex-direction:column;gap:1.8rem}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-size:1.4rem;font-family:var(--font-serif);font-weight:700}
-.mobile-menu a:hover{color:var(--gold)}
-.menu-close{position:absolute;top:1.5rem;right:6%;font-size:1.8rem;cursor:pointer;color:var(--muted)}
-.hero{min-height:100vh;display:flex;align-items:center;padding:7rem 6% 5rem;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 70% 25%,rgba(185,146,51,.10) 0%,transparent 62%),radial-gradient(ellipse 50% 90% at 100% 90%,rgba(255,255,255,.9) 0%,transparent 55%)}
-.hero-grid-pat{position:absolute;inset:0;opacity:.02;background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);background-size:64px 64px}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:4rem;align-items:center;width:100%;max-width:1300px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.1);border:1px solid var(--gold-border);padding:.38rem 1rem;border-radius:50px;font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.8rem;animation:fadeUp .7s var(--ease) both}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%}
-.hero h1{font-family:var(--font-serif);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:900;line-height:1.08;margin-bottom:1.2rem;animation:fadeUp .7s .12s var(--ease) both}
-.hero h1 em{color:var(--gold);font-style:normal}
-.hero-desc{color:var(--muted);font-size:1.04rem;line-height:1.85;max-width:620px;margin-bottom:1.1rem;animation:fadeUp .7s .24s var(--ease) both}
-.hero-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem 1.4rem;margin:1.4rem 0 2rem;max-width:640px;animation:fadeUp .7s .3s var(--ease) both}
-.hero-list div{display:flex;gap:.7rem;align-items:flex-start;color:var(--off-white);font-size:.9rem;line-height:1.55}
-.hero-list span{color:var(--success);font-weight:700}
-.hero-actions{animation:fadeUp .7s .36s var(--ease) both}
-.hero-stat-bar{display:flex;gap:2.2rem;margin-top:2.4rem;padding-top:2rem;border-top:1px solid var(--gold-border);animation:fadeUp .7s .48s var(--ease) both;flex-wrap:wrap}
-.h-stat-num{font-family:var(--font-serif);font-size:2rem;font-weight:800;color:var(--gold);line-height:1}
-.h-stat-label{font-size:.71rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
-.hero-offers{background:linear-gradient(180deg,#fffdf9 0%,#ffffff 100%);border:1px solid var(--gold-border);border-radius:20px;padding:2rem;animation:fadeUp .7s .48s var(--ease) both;box-shadow:0 22px 70px rgba(80,55,15,.10)}
-.offer-head{font-family:var(--font-serif);font-size:1.08rem;font-weight:700;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
-.offer-head::before{content:'';display:block;width:4px;height:20px;background:linear-gradient(var(--gold),var(--gold-light));border-radius:2px}
-.offer-list{list-style:none;display:flex;flex-direction:column;gap:.9rem}
-.offer-list li{display:flex;align-items:flex-start;gap:.75rem;font-size:.87rem;line-height:1.55}
-.o-check{width:22px;height:22px;flex-shrink:0;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#2ecc71;font-size:.7rem;font-weight:700;margin-top:1px}
-.offer-list strong{color:var(--white)}
-.offer-list span{color:var(--muted)}
-.offer-cta{margin-top:1.5rem;width:100%;text-align:center;padding:.8rem;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-weight:700;font-size:.88rem;display:block}
-.offer-cta:hover{opacity:.88;transform:translateY(-1px)}
-.ticker{background:linear-gradient(90deg,var(--gold),var(--gold-light));padding:.58rem 0;overflow:hidden;white-space:nowrap}
-.ticker-track{display:inline-flex;animation:ticker 30s linear infinite}
-.ticker-track span{color:var(--navy);font-weight:700;font-size:.77rem;letter-spacing:.08em;text-transform:uppercase;padding:0 2.5rem}
-.ticker-track span::before{content:'✦  ';opacity:.6}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.who-strip{background:var(--navy-mid);padding:3rem 6%}
-.who-inner{display:flex;align-items:center;gap:2.2rem;flex-wrap:wrap}
-.who-label{font-size:.73rem;font-weight:700;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-.who-divider{width:1px;height:34px;background:var(--gold-border);flex-shrink:0}
-.who-tags{display:flex;flex-wrap:wrap;gap:.7rem}
-.who-tag{background:rgba(201,168,76,.08);border:1px solid var(--gold-border);color:var(--off-white);padding:.38rem .95rem;border-radius:50px;font-size:.82rem;font-weight:500}
-.who-tag:hover{background:var(--gold-dim);color:var(--gold);border-color:var(--gold)}
-#about{background:var(--navy)}
-.about-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:2rem;align-items:stretch}
-.about-card,.chips-card{background:var(--navy-mid);border:1px solid var(--gold-border);border-radius:16px;padding:2rem}
-.about-copy p{color:var(--muted);line-height:1.88;font-size:.94rem;margin-bottom:1rem}
-.chips-title{font-family:var(--font-serif);font-size:1.15rem;margin-bottom:1rem;color:var(--gold)}
-.chips{display:flex;flex-wrap:wrap;gap:.8rem}
-.chip{padding:.55rem .9rem;border-radius:999px;background:var(--gold-dim);border:1px solid var(--gold-border);color:var(--off-white);font-size:.84rem;font-weight:500}
-.chip:hover{transform:translateY(-1px);border-color:var(--gold);color:var(--gold)}
-#services{background:#fcfaf6}
-.service-cats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
-.cat-card{background:var(--navy-mid);border:1px solid var(--gold-border);border-radius:16px;padding:2rem;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
-.cat-card:hover{transform:translateY(-6px);border-color:rgba(201,168,76,.5);box-shadow:0 16px 48px rgba(0,0,0,.35)}
-.cat-top{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
-.cat-icon{width:52px;height:52px;border-radius:12px;background:var(--gold-dim);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:1.45rem;flex-shrink:0}
-.cat-name{font-family:var(--font-serif);font-size:1.2rem;font-weight:700}
-.cat-sub{color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:1.1rem}
-.cat-list{display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.25rem}
-.cat-list li{list-style:none;display:flex;gap:.75rem;align-items:flex-start;color:var(--off-white);font-size:.88rem;line-height:1.6}
-.cat-list li span{color:var(--success);font-weight:700;flex-shrink:0}
-.cat-link{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);font-size:.84rem;font-weight:700}
-.cat-link:hover{transform:translateX(2px)}
-.service-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.5rem}
-.svc-mini{background:var(--navy);border:1px solid var(--gold-border);border-radius:14px;padding:1.2rem}
-.svc-mini h4{font-family:var(--font-serif);font-size:1rem;margin-bottom:.5rem}
-.svc-mini p{color:var(--muted);font-size:.83rem;line-height:1.65;margin-bottom:.85rem}
-.svc-mini-btn{display:inline-flex;align-items:center;gap:.4rem;color:var(--gold);font-weight:700;font-size:.8rem}
-.svc-mini-btn:hover{transform:translateX(2px)}
-#why{background:#f8f4ed}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.why-feats{display:flex;flex-direction:column;gap:1.6rem;margin-top:2.5rem}
-.wf{display:flex;gap:1.1rem;align-items:flex-start}
-.wf-icon{width:38px;height:38px;flex-shrink:0;border-radius:9px;background:var(--gold-dim);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:1rem}
-.wf-body h4{font-weight:600;font-size:.93rem;margin-bottom:.25rem}
-.wf-body p{color:var(--muted);font-size:.83rem;line-height:1.68}
-.process-box{background:var(--navy-mid);border:1px solid var(--gold-border);border-radius:16px;padding:2.5rem}
-.pb-title{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;color:var(--gold);margin-bottom:2rem}
-.steps{display:flex;flex-direction:column}
-.step{display:flex;gap:1.1rem;padding-bottom:1.8rem;position:relative}
-.step:not(:last-child)::after{content:'';position:absolute;left:16px;top:36px;bottom:0;width:1px;background:var(--gold-border)}
-.step-num{width:34px;height:34px;flex-shrink:0;border-radius:50%;border:1px solid var(--gold);background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:.88rem;font-weight:700;color:var(--gold)}
-.step-body h5{font-weight:600;font-size:.88rem;margin-bottom:.2rem}
-.step-body p{color:var(--muted);font-size:.8rem;line-height:1.6}
-#trust{background:#fffdf9}
-.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem;margin-top:3rem}
-.trust-card{background:var(--navy-card);border:1px solid var(--gold-border);border-radius:14px;padding:2rem;display:flex;flex-direction:column;gap:1rem;transition:transform .3s var(--ease),box-shadow .3s}
-.trust-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(0,0,0,.35)}
-.trust-icon{font-size:1.8rem}
-.trust-name{font-family:var(--font-serif);font-size:1.05rem;font-weight:700}
-.trust-desc{color:var(--muted);font-size:.84rem;line-height:1.68}
-.local-seo{background:linear-gradient(135deg,#f7f1e5 0%,#fffaf0 60%,#f3e7cb 100%);border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border);padding:4.5rem 6%;position:relative;overflow:hidden}
-.local-seo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(201,168,76,.06) 0%,transparent 70%)}
-.local-seo-in{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
-.local-seo-card{background:rgba(255,255,255,.85);border:1px solid var(--gold-border);border-radius:18px;padding:1.6rem;box-shadow:0 18px 50px rgba(80,55,15,.08)}
-.local-seo-card h3{font-family:var(--font-serif);font-size:1.12rem;margin-bottom:.6rem;color:var(--gold)}
-.local-seo-card p{color:#333;opacity:.95;line-height:1.75;font-size:.9rem}
-.cta-band{background:linear-gradient(180deg,#fffdf9 0%,#f7f1e5 100%);padding:5rem 6%;text-align:center}
-.cta-band h2{font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:1rem}
-.cta-band p{color:var(--muted);font-size:1rem;margin-bottom:2.5rem;max-width:560px;margin-inline:auto}
-.cta-band .btn-group{justify-content:center}
-#contact{background:#fcfaf6}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.contact-items{display:flex;flex-direction:column;gap:1.4rem;margin-top:2rem}
-.c-item{display:flex;gap:1rem;align-items:flex-start}
-.c-icon{width:44px;height:44px;flex-shrink:0;border-radius:10px;background:var(--gold-dim);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-.c-item h4{font-size:.73rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.3rem}
-.c-item p,.c-item a{font-weight:500;font-size:.93rem}
-.c-item a:hover{color:var(--gold)}
-.cf-box{background:var(--navy-mid);border:1px solid var(--gold-border);border-radius:16px;padding:2.5rem}
-.cf-title{font-family:var(--font-serif);font-size:1.25rem;font-weight:700;margin-bottom:1rem}
-.cf-sub{color:var(--muted);font-size:.9rem;line-height:1.7;margin-bottom:1.4rem}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.fg{margin-bottom:1.1rem}
-.fg label{display:block;font-size:.73rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.45rem}
-.fg input,.fg select,.fg textarea{width:100%;background:var(--navy-card);border:1px solid var(--gold-border);border-radius:8px;padding:.7rem .95rem;color:var(--white);font-family:var(--font-sans);font-size:.88rem;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.12)}
-.fg select option{background:var(--navy-card)}
-.fg textarea{resize:vertical;min-height:95px}
-.form-btn{width:100%;padding:.88rem;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);font-weight:700;font-size:.92rem;border:none;border-radius:8px;cursor:pointer;font-family:var(--font-sans)}
-.form-btn:hover{opacity:.88;transform:translateY(-1px)}
-.form-note{text-align:center;margin-top:.9rem;font-size:.74rem;color:var(--muted)}
-footer{border-top:1px solid var(--gold-border);padding:3.5rem 6%;display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center}
-.footer-logo{display:flex;align-items:center;gap:10px}
-.footer-copy{font-size:.76rem;color:var(--muted);margin-top:.3rem}
-.footer-copy strong{color:var(--gold)}
-.footer-links{display:flex;gap:1.8rem;justify-content:center}
-.footer-links a{color:var(--muted);font-size:.82rem}
-.footer-links a:hover{color:var(--gold)}
-.footer-contact{text-align:right;font-size:.82rem;color:var(--muted)}
-.footer-contact a{color:var(--gold);font-weight:600}
-.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:300;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,.5);animation:wap 2.5s infinite}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,.7)}
-@keyframes wap{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.5)}50%{box-shadow:0 4px 32px rgba(37,211,102,.85)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-@media(max-width:1100px){.hero-inner,.about-grid,.local-seo-in{grid-template-columns:1fr}.hero-offers{max-width:520px}.why-grid,.contact-grid{grid-template-columns:1fr;gap:3rem}.service-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}footer{grid-template-columns:1fr;text-align:center}.footer-contact,.footer-links{text-align:center;justify-content:center}}
-@media(max-width:900px){.service-cats{grid-template-columns:1fr}.hero-list{grid-template-columns:1fr}}
-@media(max-width:768px){.nav-links,.nav-phone{display:none}.hamburger{display:flex}.sw{padding:5rem 5%}.who-strip,.local-seo{padding:3rem 5%}.form-row,.service-mini-grid{grid-template-columns:1fr}.hero-stat-bar{gap:1.4rem}.hero{padding:7rem 5% 4rem}}
-@media(max-width:480px){nav{padding:1rem 5%}.cta-band{padding:4rem 5%}}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--white);border-radius:2px;transition:.3s}
+.mob-menu{display:none;position:fixed;inset:0;z-index:290;background:var(--ink-mid);padding:5.5rem 7% 3rem;flex-direction:column;gap:1.6rem}
+.mob-menu.open{display:flex}
+.mob-menu a{font-family:var(--serif);font-size:2rem;font-weight:600;border-bottom:1px solid var(--ink-line);padding-bottom:.8rem;transition:color .2s}
+.mob-menu a:hover{color:var(--gold)}
+.mob-close{position:absolute;top:1.6rem;right:7%;font-size:1.5rem;cursor:pointer;color:var(--muted)}
 
-.logo-words strong,.svc-name,.trust-name,.pb-title,.cf-title,.section-title,.about-card h3,.service-cat h3,.c-item p,.c-item a,.wf-body h4,.step-body h5,.offer-list strong,.hero-list div,.mobile-menu a{color:#111}
-.section-sub,.hero-desc,.svc-desc,.trust-desc,.wf-body p,.step-body p,.cf-sub,.footer-copy,.footer-contact,.c-item h4,.fg label,.offer-list span{color:#555}
-.svc-card,.trust-card,.process-box,.cf-box,.about-card,.about-panel,.service-cat{box-shadow:0 14px 40px rgba(80,55,15,.06)}
-.svc-card:hover,.trust-card:hover,.service-cat:hover{box-shadow:0 22px 60px rgba(80,55,15,.12)}
-.btn-secondary{color:#111;background:rgba(255,255,255,.7)}
-.btn-secondary:hover{background:#fff7e5}
-.who-strip{background:#fffdf9;border-top:1px solid var(--gold-border);border-bottom:1px solid var(--gold-border)}
-.ticker-track span{color:#221a0d}
-.footer-links a{color:#444}
-.footer-links a:hover{color:var(--gold)}
-.fg input,.fg select,.fg textarea{color:#111;background:#fffdf9}
-.hamburger span{background:#111}
+/* ── HERO ── */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:9rem 7% 5rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 80% 20%,rgba(201,170,92,.07) 0%,transparent 55%),radial-gradient(ellipse 50% 80% at 5% 80%,rgba(59,110,245,.06) 0%,transparent 50%)}
+.grid-pat{position:absolute;inset:0;opacity:.025;background-image:linear-gradient(rgba(201,170,92,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(201,170,92,.6) 1px,transparent 1px);background-size:80px 80px}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:5rem;align-items:center;width:100%;max-width:1340px}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;padding:.35rem 1rem .35rem .35rem;border:1px solid var(--gold-bdr);border-radius:50px;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;animation:fadeUp .8s var(--ease) both}
+.hero-kicker-dot{width:22px;height:22px;background:var(--gold-dim);border:1px solid var(--gold-bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem}
+.hero h1{font-family:var(--serif);font-size:clamp(3rem,5.5vw,5rem);font-weight:600;line-height:1.06;margin-bottom:1.4rem;animation:fadeUp .8s .12s var(--ease) both}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero-desc{color:var(--muted);font-size:.97rem;line-height:1.9;max-width:580px;margin-bottom:2rem;animation:fadeUp .8s .22s var(--ease) both}
+.hero-actions{animation:fadeUp .8s .3s var(--ease) both;margin-bottom:3rem}
+.hero-divider{width:100%;height:1px;background:var(--ink-line);margin:2rem 0;animation:fadeUp .8s .4s var(--ease) both}
+.hero-stats{display:flex;gap:3rem;flex-wrap:wrap;animation:fadeUp .8s .48s var(--ease) both}
+.h-stat strong{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--gold);display:block;line-height:1}
+.h-stat span{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;display:block}
+.hero-panel{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:8px;padding:2.2rem;animation:fadeUp .9s .35s var(--ease) both;position:relative;overflow:hidden}
+.hero-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.panel-head{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--gold);margin-bottom:1.6rem;padding-bottom:1rem;border-bottom:1px solid var(--ink-line)}
+.panel-row{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--ink-line);align-items:flex-start}
+.panel-row:last-of-type{border-bottom:none}
+.p-num{font-family:var(--serif);font-size:.7rem;font-weight:700;color:var(--gold);width:20px;flex-shrink:0;opacity:.6;padding-top:2px}
+.p-title{font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:.2rem}
+.p-sub{font-size:.78rem;color:var(--muted);line-height:1.6}
+.panel-cta{margin-top:1.6rem;display:block;width:100%;text-align:center;padding:.8rem;background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--ink);font-weight:700;font-size:.82rem;letter-spacing:.07em;text-transform:uppercase;border-radius:4px;transition:opacity .2s}
+.panel-cta:hover{opacity:.88}
 
+/* ── TICKER ── */
+.ticker{padding:.55rem 0;background:var(--gold);overflow:hidden;white-space:nowrap}
+.tick-track{display:inline-flex;animation:tick 32s linear infinite}
+.tick-track span{color:var(--ink);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:0 2rem}
+.tick-track span::before{content:'◆  ';opacity:.5}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── WHO ── */
+.who{background:var(--ink-mid);border-top:1px solid var(--ink-line);border-bottom:1px solid var(--ink-line);padding:2.5rem 7%}
+.who-in{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.who-lbl{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);white-space:nowrap;flex-shrink:0}
+.who-sep{width:1px;height:28px;background:var(--ink-line);flex-shrink:0}
+.who-tags{display:flex;flex-wrap:wrap;gap:.6rem}
+.w-tag{padding:.32rem .85rem;border:1px solid var(--ink-line);border-radius:2px;font-size:.76rem;color:var(--muted);transition:all .2s;cursor:default}
+.w-tag:hover{border-color:var(--gold-bdr);color:var(--gold)}
+
+/* ── ABOUT ── */
+#about{background:var(--ink-mid)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:stretch}
+.about-main{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:2.5rem}
+.about-main p{color:var(--muted);line-height:1.95;font-size:.93rem;margin-bottom:1.1rem}
+.about-main p strong{color:var(--white)}
+.about-side{display:flex;flex-direction:column;gap:1.2rem}
+.expertise-box{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:1.8rem;flex:1}
+.expertise-box h4{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--gold);margin-bottom:1.2rem}
+.exp-list{display:flex;flex-direction:column;gap:.6rem}
+.exp-item{display:flex;align-items:center;gap:.75rem;font-size:.82rem;color:var(--muted);padding:.45rem 0;border-bottom:1px solid var(--ink-line)}
+.exp-item:last-child{border-bottom:none}
+.exp-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.about-contact-box{background:linear-gradient(135deg,rgba(201,170,92,.1),rgba(201,170,92,.04));border:1px solid var(--gold-bdr);border-radius:6px;padding:1.5rem;text-align:center}
+.acb-title{font-family:var(--serif);font-size:.95rem;color:var(--gold);margin-bottom:.5rem}
+.acb-ph{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:.8rem}
+
+/* ── SERVICES ── */
+#services{background:var(--ink)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink-line);border:1px solid var(--ink-line);border-radius:6px;overflow:hidden}
+.svc-card{background:var(--ink-card);padding:2rem;transition:background .3s}
+.svc-card:hover{background:rgba(201,170,92,.04)}
+.svc-num{font-family:var(--serif);font-size:.65rem;font-weight:700;color:var(--gold);opacity:.5;letter-spacing:.2em;margin-bottom:1.2rem}
+.svc-icon{font-size:1.6rem;margin-bottom:.9rem}
+.svc-name{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--white);margin-bottom:.6rem}
+.svc-desc{color:var(--muted);font-size:.82rem;line-height:1.75;margin-bottom:1.2rem}
+.svc-list{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.4rem}
+.svc-list li{list-style:none;display:flex;align-items:flex-start;gap:.6rem;font-size:.79rem;color:rgba(245,243,238,.6);line-height:1.55}
+.svc-list li::before{content:'—';color:var(--gold);opacity:.6;flex-shrink:0}
+.svc-link{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s}
+.svc-link:hover{gap:.7rem}
+
+/* ── APPROACH ── */
+#approach{background:var(--ink-mid)}
+.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.step-list{display:flex;flex-direction:column;gap:0;margin-top:2.5rem}
+.s-step{display:flex;gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid var(--ink-line);position:relative}
+.s-step:first-child{padding-top:0}
+.s-step:last-child{border-bottom:none}
+.s-num{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold);opacity:.25;min-width:42px;line-height:1}
+.s-body h5{font-weight:600;font-size:.9rem;margin-bottom:.3rem;color:var(--white)}
+.s-body p{color:var(--muted);font-size:.81rem;line-height:1.7}
+.right-stack{display:flex;flex-direction:column;gap:1.2rem}
+.rs-card{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:1.6rem;display:flex;gap:1.1rem;align-items:flex-start;transition:border-color .3s}
+.rs-card:hover{border-color:var(--gold-bdr)}
+.rs-icon{width:38px;height:38px;border-radius:4px;background:var(--gold-dim);border:1px solid var(--gold-bdr);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.rs-body h5{font-weight:600;font-size:.88rem;margin-bottom:.25rem}
+.rs-body p{color:var(--muted);font-size:.79rem;line-height:1.65}
+
+/* ── SECTORS ── */
+#sectors{background:var(--ink)}
+.sector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}
+.sect-card{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:1.5rem;text-align:center;transition:border-color .3s,transform .3s}
+.sect-card:hover{border-color:var(--gold-bdr);transform:translateY(-4px)}
+.sect-icon{font-size:1.8rem;margin-bottom:.8rem}
+.sect-name{font-family:var(--serif);font-size:.95rem;font-weight:600;margin-bottom:.4rem}
+.sect-sub{color:var(--muted);font-size:.76rem;line-height:1.6}
+
+/* ── TRUST / NUMBERS ── */
+#trust{background:var(--ink-mid)}
+.numbers-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink-line);border:1px solid var(--ink-line);border-radius:6px;overflow:hidden;margin-bottom:3rem}
+.num-box{background:var(--ink-card);padding:2.2rem;text-align:center}
+.nb-val{font-family:var(--serif);font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.4rem}
+.nb-lbl{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.trust-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.t-card{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:1.8rem;transition:border-color .3s}
+.t-card:hover{border-color:var(--gold-bdr)}
+.t-icon{font-size:1.6rem;margin-bottom:.8rem}
+.t-name{font-family:var(--serif);font-size:1rem;font-weight:600;margin-bottom:.5rem}
+.t-desc{color:var(--muted);font-size:.81rem;line-height:1.7}
+
+/* ── CTA BAND ── */
+.cta-band{background:linear-gradient(135deg,var(--ink-mid) 0%,var(--ink) 100%);border-top:1px solid var(--ink-line);border-bottom:1px solid var(--ink-line);padding:6rem 7%;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(201,170,92,.06) 0%,transparent 65%);pointer-events:none}
+.cta-band h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:600;margin-bottom:1rem;position:relative}
+.cta-band p{color:var(--muted);font-size:.97rem;line-height:1.8;max-width:550px;margin:0 auto 2.5rem;position:relative}
+
+/* ── CONTACT ── */
+#contact{background:var(--ink)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+.c-items{display:flex;flex-direction:column;gap:1.4rem;margin-top:2.5rem}
+.c-row{display:flex;gap:1rem;align-items:flex-start}
+.c-ico{width:42px;height:42px;flex-shrink:0;border:1px solid var(--ink-line);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.c-lbl{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.c-val{font-size:.9rem;font-weight:500}
+.c-val a{color:var(--white);transition:color .2s}
+.c-val a:hover{color:var(--gold)}
+.form-box{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:2.5rem;position:relative;overflow:hidden}
+.form-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.form-title{font-family:var(--serif);font-size:1.4rem;font-weight:600;margin-bottom:.4rem}
+.form-sub{color:var(--muted);font-size:.82rem;line-height:1.65;margin-bottom:1.8rem}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.45rem}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--ink-line);border-radius:4px;padding:.7rem .9rem;color:var(--white);font-family:var(--sans);font-size:.85rem;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(138,143,160,.5)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,170,92,.1)}
+.fg select option{background:var(--ink-mid);color:var(--white)}
+.fg textarea{resize:vertical;min-height:90px}
+.f-btn{width:100%;padding:.88rem;background:var(--gold);color:var(--ink);font-weight:700;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;font-family:var(--sans);transition:all .25s}
+.f-btn:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.f-note{text-align:center;margin-top:.9rem;font-size:.72rem;color:var(--muted)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink-mid);border-top:1px solid var(--ink-line);padding:3rem 7%;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem;align-items:center}
+.f-brand strong{font-family:var(--serif);font-size:1.05rem;font-weight:600;display:block;margin-bottom:.3rem}
+.f-brand span{font-size:.7rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.f-links{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center}
+.f-links a{font-size:.76rem;color:var(--muted);letter-spacing:.05em;transition:color .2s}
+.f-links a:hover{color:var(--gold)}
+.f-right{text-align:right}
+.f-ph{color:var(--gold);font-weight:600;font-size:.88rem;margin-bottom:.3rem}
+.f-copy{font-size:.7rem;color:var(--muted)}
+
+/* ── WA FLOAT ── */
+.wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:400;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.55rem;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s;animation:wap 2.5s infinite}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.65)}
+@keyframes wap{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,.75)}}
+
+/* ── LOCAL STRIP ── */
+.local-strip{background:var(--ink-mid);border-top:1px solid var(--ink-line);border-bottom:1px solid var(--ink-line);padding:3.5rem 7%}
+.local-in{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.local-card{background:var(--ink-card);border:1px solid var(--gold-bdr);border-radius:6px;padding:1.8rem}
+.local-card h3{font-family:var(--serif);font-size:1rem;color:var(--gold);margin-bottom:.6rem}
+.local-card p{color:var(--muted);font-size:.85rem;line-height:1.75}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .hero-inner,.about-grid,.approach-grid,.contact-grid,.local-in{grid-template-columns:1fr}
+  .hero-panel,.about-side{max-width:560px}
+  .sector-grid{grid-template-columns:repeat(2,1fr)}
+  .numbers-row{grid-template-columns:repeat(2,1fr)}
+  .trust-cards{grid-template-columns:1fr 1fr}
+  footer{grid-template-columns:1fr;text-align:center}
+  .f-links{justify-content:center}
+  .f-right{text-align:center}
+}
+@media(max-width:900px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .nav-links,.nav-ph{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .svc-grid{grid-template-columns:1fr}
+  .trust-cards,.sector-grid,.numbers-row{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .sw{padding:4.5rem 5%}
+  .who,.local-strip{padding:2.5rem 5%}
+  nav{padding:1rem 5%}
+  nav.scrolled{padding:.9rem 5%}
+}
 </style>
 </head>
 <body>
+
+<!-- NAV -->
 <nav id="nav">
   <div class="nav-logo">
     <div class="logo-mark">V</div>
-    <div class="logo-words">
-      <strong>Verma Consultancy Services</strong>
-      <span>Tax · Payroll · GST · Compliance</span>
+    <div class="logo-txt">
+      <strong>Verma Consultancy</strong>
+      <span>Tax · Audit · Advisory</span>
     </div>
   </div>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Us</a></li>
+    <li><a href="#approach">Approach</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <a class="nav-phone" href="tel:+918707401846">📞 87074 01846</a>
-    <a class="nav-cta" href="#contact">Free Consultation</a>
+    <a class="nav-ph" href="tel:+918707401846">+91 87074 01846</a>
+    <a class="nav-cta" href="#contact">Enquire Now</a>
     <div class="hamburger" onclick="document.getElementById('mm').classList.add('open')">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
 
-<div class="mobile-menu" id="mm">
-  <span class="menu-close" onclick="document.getElementById('mm').classList.remove('open')">✕</span>
+<div class="mob-menu" id="mm">
+  <span class="mob-close" onclick="document.getElementById('mm').classList.remove('open')">✕</span>
   <a href="#home" onclick="document.getElementById('mm').classList.remove('open')">Home</a>
   <a href="#about" onclick="document.getElementById('mm').classList.remove('open')">About</a>
   <a href="#services" onclick="document.getElementById('mm').classList.remove('open')">Services</a>
-  <a href="#why" onclick="document.getElementById('mm').classList.remove('open')">Why Us</a>
+  <a href="#approach" onclick="document.getElementById('mm').classList.remove('open')">Approach</a>
   <a href="#contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
-  <a href="tel:+918707401846" style="color:var(--gold);">📞 +91 87074 01846</a>
+  <a href="tel:+918707401846" style="color:var(--gold);font-size:1rem;">+91 87074 01846</a>
 </div>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
-  <div class="hero-grid-pat"></div>
+  <div class="grid-pat"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">Comprehensive Tax, Payroll & Compliance Solutions</div>
-      <h1>Professional <em>Financial, Tax &amp; Statutory</em> Support for Individuals and Businesses</h1>
-      <p class="hero-desc">Verma Consultancy Services delivers end-to-end support across Income Tax, GST, accounting, payroll, PF, ESI, ROC compliance, audit assistance, and litigation support — helping clients stay compliant, organised, and growth-focused.</p>
-      <div class="hero-list">
-        <div><span>✓</span><p>ITR, GST, accounting, payroll and labour law compliance under one roof</p></div>
-        <div><span>✓</span><p>Structured monthly retainership support for startups, SMEs and growing businesses</p></div>
-        <div><span>✓</span><p>Timely filings, practical advisory and ongoing client coordination</p></div>
-        <div><span>✓</span><p>Support for notices, scrutiny matters and compliance-driven documentation</p></div>
+      <div class="hero-kicker">
+        <span class="hero-kicker-dot">✦</span>
+        Lucknow's Trusted Compliance & Advisory Partner
       </div>
-      <div class="hero-actions btn-group">
-        <a href="#contact" class="btn-primary">📞 Book Free Consultation</a>
-        <a href="#services" class="btn-secondary">Explore Services →</a>
+      <h1>Where <em>Tax Intelligence</em> Meets Statutory Precision</h1>
+      <p class="hero-desc">Verma Consultancy Services delivers institutional-grade advisory across Income Tax, GST, Audit, Accounting, Payroll, Labour Compliance, Corporate Law and Litigation — for businesses that demand accuracy, speed, and professional depth.</p>
+      <div class="hero-actions btn-grp">
+        <a href="#contact" class="btn-p">Schedule a Consultation</a>
+        <a href="#services" class="btn-s">View Service Suite →</a>
       </div>
-      <div class="hero-stat-bar">
-        <div><div class="h-stat-num">8+</div><div class="h-stat-label">Years of Experience</div></div>
-        <div><div class="h-stat-num">12+</div><div class="h-stat-label">Core Service Areas</div></div>
-        <div><div class="h-stat-num">100%</div><div class="h-stat-label">Focus on Timely Compliance</div></div>
-        <div><div class="h-stat-num">1</div><div class="h-stat-label">Single Window Support</div></div>
+      <div class="hero-divider"></div>
+      <div class="hero-stats">
+        <div class="h-stat"><strong>8+</strong><span>Years in Practice</span></div>
+        <div class="h-stat"><strong>12+</strong><span>Service Areas</span></div>
+        <div class="h-stat"><strong>500+</strong><span>Matters Handled</span></div>
+        <div class="h-stat"><strong>100%</strong><span>Compliance Focus</span></div>
       </div>
     </div>
     <div>
-      <div class="hero-offers">
-        <div class="offer-head">How We Support Clients</div>
-        <ul class="offer-list">
-          <li><div class="o-check">✓</div><div><strong>Income Tax & GST Compliance</strong><br><span>Return filing, reconciliations, registrations and advisory support</span></div></li>
-          <li><div class="o-check">✓</div><div><strong>Accounting, Bookkeeping & MIS</strong><br><span>Structured records, monthly books closure and management reporting</span></div></li>
-          <li><div class="o-check">✓</div><div><strong>Payroll, PF & ESI Management</strong><br><span>Salary processing, statutory filings and employee compliance coordination</span></div></li>
-          <li><div class="o-check">✓</div><div><strong>Retainership & Litigation Support</strong><br><span>Ongoing professional support for businesses and notice-response matters</span></div></li>
-        </ul>
-        <a href="#contact" class="offer-cta">Request Consultation →</a>
+      <div class="hero-panel">
+        <div class="panel-head">Our Core Practice Areas</div>
+        <div class="panel-row">
+          <div class="p-num">01</div>
+          <div><div class="p-title">Tax Advisory & Compliance</div><div class="p-sub">Income Tax returns, planning, notices, scrutiny and litigation support</div></div>
+        </div>
+        <div class="panel-row">
+          <div class="p-num">02</div>
+          <div><div class="p-title">GST Practice</div><div class="p-sub">Registration, GSTR filings, reconciliations, assessments and appeals</div></div>
+        </div>
+        <div class="panel-row">
+          <div class="p-num">03</div>
+          <div><div class="p-title">Audit & Assurance</div><div class="p-sub">Tax audit coordination, internal review and documentation support</div></div>
+        </div>
+        <div class="panel-row">
+          <div class="p-num">04</div>
+          <div><div class="p-title">Payroll & Labour Compliance</div><div class="p-sub">Salary processing, PF, ESI and statutory employee compliance</div></div>
+        </div>
+        <div class="panel-row">
+          <div class="p-num">05</div>
+          <div><div class="p-title">Corporate & ROC Compliance</div><div class="p-sub">Company law filings, director compliance and MCA coordination</div></div>
+        </div>
+        <a href="#contact" class="panel-cta">Request a Free Consultation →</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TICKER -->
 <div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>ITR Filing</span><span>GST Filing</span><span>GST Registration</span><span>Accounting</span><span>Bookkeeping</span><span>Payroll Processing</span><span>PF Compliance</span><span>ESI Compliance</span><span>ROC Compliance</span><span>Audit Support</span><span>GST Litigation</span><span>Income Tax Litigation</span>
-    <span>ITR Filing</span><span>GST Filing</span><span>GST Registration</span><span>Accounting</span><span>Bookkeeping</span><span>Payroll Processing</span><span>PF Compliance</span><span>ESI Compliance</span><span>ROC Compliance</span><span>Audit Support</span><span>GST Litigation</span><span>Income Tax Litigation</span>
+  <div class="tick-track">
+    <span>ITR Filing</span><span>GST Filing</span><span>GST Registration</span><span>Tax Audit</span><span>Bookkeeping</span><span>Payroll Processing</span><span>PF Compliance</span><span>ESI Compliance</span><span>ROC Filings</span><span>GST Litigation</span><span>IT Litigation</span><span>Monthly Retainership</span>
+    <span>ITR Filing</span><span>GST Filing</span><span>GST Registration</span><span>Tax Audit</span><span>Bookkeeping</span><span>Payroll Processing</span><span>PF Compliance</span><span>ESI Compliance</span><span>ROC Filings</span><span>GST Litigation</span><span>IT Litigation</span><span>Monthly Retainership</span>
   </div>
 </div>
 
-<div class="who-strip reveal">
-  <div class="who-inner">
-    <span class="who-label">Who We Serve</span>
-    <div class="who-divider"></div>
+<!-- WHO WE SERVE -->
+<div class="who reveal">
+  <div class="who-in">
+    <span class="who-lbl">Clients We Serve</span>
+    <div class="who-sep"></div>
     <div class="who-tags">
-      <span class="who-tag">🧑‍💼 Salaried Individuals</span>
-      <span class="who-tag">💻 Freelancers & Consultants</span>
-      <span class="who-tag">🚀 Startups</span>
-      <span class="who-tag">🏭 SMEs & MSMEs</span>
-      <span class="who-tag">🏢 Private Limited Companies</span>
-      <span class="who-tag">🤝 LLPs & Partnership Firms</span>
-      <span class="who-tag">🛒 Traders & E-Commerce Businesses</span>
+      <span class="w-tag">Salaried Professionals</span>
+      <span class="w-tag">Freelancers & Consultants</span>
+      <span class="w-tag">Startups & Early-stage Ventures</span>
+      <span class="w-tag">SMEs & MSMEs</span>
+      <span class="w-tag">Private Limited Companies</span>
+      <span class="w-tag">LLPs & Partnership Firms</span>
+      <span class="w-tag">Traders & E-Commerce Businesses</span>
     </div>
   </div>
 </div>
 
+<!-- ABOUT -->
 <section class="sw" id="about">
   <div class="sh reveal">
-    <span class="section-tag">About Us</span>
-    <h2 class="section-title">A Reliable Consultancy Partner for Day-to-Day Compliance and Long-Term Business Support</h2>
+    <span class="tag"><span class="line-gold"></span>About the Firm</span>
+    <h2 class="h2">Professional Advisory Rooted in<br><em>Compliance Depth & Client Accountability</em></h2>
   </div>
   <div class="about-grid">
-    <div class="about-card reveal d1">
-      <div class="about-copy">
-        <p><strong>Verma Consultancy Services</strong> is a professional consultancy firm offering practical and dependable support across taxation, accounting, payroll, statutory compliance, and advisory functions. We work with individuals, professionals, startups, and established businesses that need accurate compliance execution along with responsive day-to-day coordination.</p>
-        <p>Our service approach is built around timely filings, proper documentation, structured communication, and solution-oriented execution. Whether the requirement is a single return filing, recurring monthly compliance, employee statutory management, or assistance in responding to departmental matters, we aim to provide complete support with clarity and accountability.</p>
-        <p>By combining financial discipline with compliance expertise, we help clients reduce administrative burden, avoid delays and penalties, and maintain stronger control over their business records and statutory obligations.</p>
-      </div>
+    <div class="about-main reveal d1">
+      <p><strong>Verma Consultancy Services</strong> is a full-service tax, accounting and compliance advisory firm serving individuals, professionals, startups and businesses across Lucknow and Uttar Pradesh. We combine regulatory expertise with practical execution to help clients navigate India's evolving tax and statutory landscape with confidence.</p>
+      <p>Our practice is anchored on three pillars: <strong>timely execution</strong>, <strong>documentation discipline</strong>, and <strong>responsive professional communication</strong>. Whether the assignment involves routine return filing, structured monthly retainership, employee statutory management, or representing clients in departmental proceedings — every engagement is handled with the same standard of care and accountability.</p>
+      <p>We believe that quality advisory need not be the preserve of large metros alone. Businesses in Lucknow deserve the same professional rigour, structured approach and outcome-oriented counsel that their counterparts elsewhere access — and that is precisely what we deliver.</p>
     </div>
-    <div class="chips-card reveal d2">
-      <div class="chips-title">Core Areas of Expertise</div>
-      <div class="chips">
-        <span class="chip">Income Tax Return Filing</span>
-        <span class="chip">GST Filing & Registration</span>
-        <span class="chip">Accounting & Bookkeeping</span>
-        <span class="chip">Payroll Processing</span>
-        <span class="chip">PF & ESI Compliance</span>
-        <span class="chip">ROC & MCA Filings</span>
-        <span class="chip">Audit Assistance</span>
-        <span class="chip">Litigation Support</span>
-        <span class="chip">Business Retainership</span>
-        <span class="chip">MIS & Reporting</span>
+    <div class="about-side reveal d2">
+      <div class="expertise-box">
+        <h4>Areas of Practice</h4>
+        <div class="exp-list">
+          <div class="exp-item">Direct Tax — Returns, Planning & Litigation</div>
+          <div class="exp-item">Indirect Tax — GST Filing, Advisory & Disputes</div>
+          <div class="exp-item">Audit — Tax Audit, Internal Review & Documentation</div>
+          <div class="exp-item">Accounting, Bookkeeping & MIS Reporting</div>
+          <div class="exp-item">Payroll Processing & Salary Compliance</div>
+          <div class="exp-item">PF & ESI Registration and Monthly Compliance</div>
+          <div class="exp-item">ROC, MCA & Corporate Secretarial Support</div>
+          <div class="exp-item">Monthly Business Retainership Engagements</div>
+        </div>
+      </div>
+      <div class="about-contact-box">
+        <div class="acb-title">Speak with an Advisor Today</div>
+        <div class="acb-ph">+91 87074 01846</div>
+        <a href="https://wa.me/918707401846?text=Hi%2C%20I%20would%20like%20to%20discuss%20a%20professional%20advisory%20requirement." target="_blank" rel="noopener" class="btn-p" style="width:100%;justify-content:center;font-size:.78rem">WhatsApp Us →</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="sw" id="services">
-  <div class="sh reveal">
-    <span class="section-tag">Our Services</span>
-    <h2 class="section-title">Detailed Service Coverage for Individuals, Professionals and Businesses</h2>
-    <p class="section-sub">The website has been rebuilt with grouped service categories so it reads like a stronger consultancy firm site and clearly shows the breadth of your offerings. It now includes PF, ESI, payroll, retainership and broader compliance coverage alongside the original tax and litigation services.</p>
+  <div class="sh reveal center">
+    <span class="tag"><span class="line-gold"></span>Service Suite</span>
+    <h2 class="h2">A Comprehensive Practice Across<br><em>Tax, Audit, Compliance & Advisory</em></h2>
+    <p class="sub" style="margin-top:1rem">Our services are structured to address the full lifecycle of financial and statutory obligations for businesses at every stage of growth.</p>
   </div>
-
-  <div class="service-cats">
-    <div class="cat-card reveal d1">
-      <div class="cat-top"><div class="cat-icon">📘</div><div class="cat-name">Income Tax Services</div></div>
-      <p class="cat-sub">End-to-end support for return filing, planning, notices, and tax-related advisory for individuals, professionals and business entities.</p>
-      <ul class="cat-list">
-        <li><span>✓</span><div>Income Tax Return filing for salaried individuals, professionals, firms and companies</div></li>
-        <li><span>✓</span><div>Tax planning, advance tax guidance and support for regular tax compliance</div></li>
-        <li><span>✓</span><div>Notice handling, scrutiny support, response drafting and litigation assistance</div></li>
+  <div class="svc-grid reveal d1">
+    <div class="svc-card">
+      <div class="svc-num">01</div>
+      <div class="svc-icon">📘</div>
+      <div class="svc-name">Income Tax Advisory</div>
+      <p class="svc-desc">End-to-end income tax services for individuals, professionals, firms, LLPs and companies — from return filing to complex litigation matters.</p>
+      <ul class="svc-list">
+        <li>ITR preparation and filing for all categories of taxpayers</li>
+        <li>Tax planning, advance tax computation and advisory</li>
+        <li>Scrutiny assessment support, notice response and appeal coordination</li>
+        <li>Rectification, refund follow-up and departmental correspondence</li>
       </ul>
-      <a class="cat-link" href="#contact">Discuss Income Tax Requirement →</a>
+      <a class="svc-link" href="#contact">Discuss Requirement →</a>
     </div>
-
-    <div class="cat-card reveal d2">
-      <div class="cat-top"><div class="cat-icon">🧾</div><div class="cat-name">GST Services</div></div>
-      <p class="cat-sub">Comprehensive GST support from registration to return filing, reconciliations, advisory and litigation matters.</p>
-      <ul class="cat-list">
-        <li><span>✓</span><div>GST registration, amendment, cancellation and advisory on applicability</div></li>
-        <li><span>✓</span><div>GSTR-1, GSTR-3B, annual return support and 2A/2B / books reconciliation assistance</div></li>
-        <li><span>✓</span><div>GST notices, assessment-stage support, reply drafting and litigation coordination</div></li>
+    <div class="svc-card">
+      <div class="svc-num">02</div>
+      <div class="svc-icon">🧾</div>
+      <div class="svc-name">GST Practice</div>
+      <p class="svc-desc">Full-spectrum GST advisory and compliance — from registration and regular filings through to reconciliation, assessment and appellate support.</p>
+      <ul class="svc-list">
+        <li>GST registration, amendments, cancellation and applicability advisory</li>
+        <li>GSTR-1, GSTR-3B, GSTR-9 / 9C and 2A/2B reconciliation</li>
+        <li>Notice handling, assessment-stage support and reply drafting</li>
+        <li>Input tax credit management and GST dispute representation</li>
       </ul>
-      <a class="cat-link" href="#contact">Enquire for GST Support →</a>
+      <a class="svc-link" href="#contact">Enquire for GST →</a>
     </div>
-
-    <div class="cat-card reveal d1">
-      <div class="cat-top"><div class="cat-icon">📊</div><div class="cat-name">Accounting & Bookkeeping</div></div>
-      <p class="cat-sub">Structured financial record maintenance to help businesses maintain accurate books and make informed decisions.</p>
-      <ul class="cat-list">
-        <li><span>✓</span><div>Day-to-day bookkeeping, ledger scrutiny, bank reconciliation and monthly closure support</div></li>
-        <li><span>✓</span><div>Preparation and review of P&amp;L, balance sheet and basic management information reports</div></li>
-        <li><span>✓</span><div>Support for internal financial organisation and documentation readiness</div></li>
+    <div class="svc-card">
+      <div class="svc-num">03</div>
+      <div class="svc-icon">📊</div>
+      <div class="svc-name">Audit & Assurance</div>
+      <p class="svc-desc">Structured audit support to strengthen financial integrity, meet statutory obligations and prepare for regulatory scrutiny.</p>
+      <ul class="svc-list">
+        <li>Tax audit coordination and form 3CA/3CB/3CD preparation</li>
+        <li>Internal review, process documentation and control assessments</li>
+        <li>Statutory audit support and documentation readiness</li>
+        <li>Books review, ledger scrutiny and financial accuracy checks</li>
       </ul>
-      <a class="cat-link" href="#contact">Get Accounting Support →</a>
+      <a class="svc-link" href="#contact">Discuss Audit Needs →</a>
     </div>
-
-    <div class="cat-card reveal d2">
-      <div class="cat-top"><div class="cat-icon">💼</div><div class="cat-name">Payroll, PF & ESI Compliance</div></div>
-      <p class="cat-sub">A dedicated service block for employee-related statutory compliance, added to make the website more complete and competitive.</p>
-      <ul class="cat-list">
-        <li><span>✓</span><div>Payroll processing, salary working, payslip support and payroll documentation coordination</div></li>
-        <li><span>✓</span><div>PF registration support, monthly ECR-related coordination, employee onboarding and exit compliance assistance</div></li>
-        <li><span>✓</span><div>ESI registration, monthly compliance support and employee coverage-related coordination</div></li>
+    <div class="svc-card">
+      <div class="svc-num">04</div>
+      <div class="svc-icon">📚</div>
+      <div class="svc-name">Accounting & Bookkeeping</div>
+      <p class="svc-desc">Disciplined financial record-keeping that gives businesses a clear, audit-ready view of their financial position at all times.</p>
+      <ul class="svc-list">
+        <li>Day-to-day bookkeeping, ledger maintenance and bank reconciliation</li>
+        <li>Monthly books closure, P&amp;L and balance sheet preparation</li>
+        <li>MIS reporting, cost tracking and management information support</li>
+        <li>Accounting system setup and documentation standardisation</li>
       </ul>
-      <a class="cat-link" href="#contact">Ask About Payroll / PF / ESI →</a>
+      <a class="svc-link" href="#contact">Get Accounting Support →</a>
     </div>
-
-    <div class="cat-card reveal d1">
-      <div class="cat-top"><div class="cat-icon">🏢</div><div class="cat-name">ROC & Corporate Compliance</div></div>
-      <p class="cat-sub">Support for basic company law compliance, regular filings and corporate record maintenance requirements.</p>
-      <ul class="cat-list">
-        <li><span>✓</span><div>Company / LLP compliance assistance, annual filing support and routine ROC coordination</div></li>
-        <li><span>✓</span><div>Director KYC, DIN-related compliance and event-based filing assistance</div></li>
-        <li><span>✓</span><div>Support for documentation, governance-related records and filing timelines</div></li>
+    <div class="svc-card">
+      <div class="svc-num">05</div>
+      <div class="svc-icon">💼</div>
+      <div class="svc-name">Payroll, PF & ESI</div>
+      <p class="svc-desc">Comprehensive employment compliance services ensuring accurate salary disbursement and statutory coverage for every employee.</p>
+      <ul class="svc-list">
+        <li>Payroll processing, salary working, CTC structuring and payslips</li>
+        <li>PF registration, ECR filing, UAN management and exit compliance</li>
+        <li>ESI registration, monthly contributions and employee coverage</li>
+        <li>Labour compliance calendar, documentation and deadline management</li>
       </ul>
-      <a class="cat-link" href="#contact">Request ROC Assistance →</a>
+      <a class="svc-link" href="#contact">Payroll / PF / ESI →</a>
     </div>
-
-    <div class="cat-card reveal d2">
-      <div class="cat-top"><div class="cat-icon">🤝</div><div class="cat-name">Retainership & Advisory</div></div>
-      <p class="cat-sub">Ongoing monthly support designed for businesses that want a dependable partner for recurring financial and statutory work.</p>
-      <ul class="cat-list">
-        <li><span>✓</span><div>Monthly retainership for accounting, GST, payroll, PF, ESI and compliance coordination</div></li>
-        <li><span>✓</span><div>Periodic review support, query handling and routine documentation assistance</div></li>
-        <li><span>✓</span><div>Suitable for startups, SMEs and growing businesses needing a structured outsourced finance function</div></li>
+    <div class="svc-card">
+      <div class="svc-num">06</div>
+      <div class="svc-icon">🏢</div>
+      <div class="svc-name">Corporate & ROC Compliance</div>
+      <p class="svc-desc">Regulatory compliance for companies and LLPs — keeping your corporate records accurate, filings timely and governance obligations met.</p>
+      <ul class="svc-list">
+        <li>Annual ROC filings — AOC-4, MGT-7, LLP-11 and related forms</li>
+        <li>Director KYC (DIR-3 KYC), DIN compliance and event-based filings</li>
+        <li>Company incorporation, LLP formation and structure advisory</li>
+        <li>MCA coordination, charge filings and corporate record maintenance</li>
       </ul>
-      <a class="cat-link" href="#contact">Explore Retainership Plans →</a>
+      <a class="svc-link" href="#contact">ROC Assistance →</a>
     </div>
   </div>
-
-  <div class="service-mini-grid reveal d3">
-    <div class="svc-mini">
-      <h4>Audit Support</h4>
-      <p>Support for internal review, tax audit coordination and documentation assistance for statutory readiness.</p>
-      <a class="svc-mini-btn" href="#contact">Know More →</a>
+  <div class="svc-grid reveal d2" style="margin-top:1px;grid-template-columns:1fr 1fr">
+    <div class="svc-card">
+      <div class="svc-num">07</div>
+      <div class="svc-icon">⚖️</div>
+      <div class="svc-name">Tax & GST Litigation Support</div>
+      <p class="svc-desc">Professional representation and documentation support across Income Tax and GST dispute proceedings — from notice to appeal.</p>
+      <ul class="svc-list">
+        <li>Income Tax scrutiny, assessment support and CIT(A) appeals</li>
+        <li>GST show cause notice reply drafting and factual compilation</li>
+        <li>Departmental correspondence, hearing representation support</li>
+        <li>Demand reconciliation, stay applications and procedural guidance</li>
+      </ul>
+      <a class="svc-link" href="#contact">Litigation Enquiry →</a>
     </div>
-    <div class="svc-mini">
-      <h4>GST Litigation</h4>
-      <p>Assistance in notice handling, reply drafting, factual compilation and support for GST dispute matters.</p>
-      <a class="svc-mini-btn" href="#contact">Know More →</a>
-    </div>
-    <div class="svc-mini">
-      <h4>Income Tax Litigation</h4>
-      <p>Support for scrutiny matters, rectification-related responses, appeals preparation and related tax correspondence.</p>
-      <a class="svc-mini-btn" href="#contact">Know More →</a>
+    <div class="svc-card">
+      <div class="svc-num">08</div>
+      <div class="svc-icon">🤝</div>
+      <div class="svc-name">Retainership & CFO Advisory</div>
+      <p class="svc-desc">A structured outsourced finance and compliance function — for businesses that need a reliable professional partner on a continuing basis.</p>
+      <ul class="svc-list">
+        <li>Monthly retainership covering accounting, GST, payroll and PF/ESI</li>
+        <li>Periodic management review, query handling and compliance calendar</li>
+        <li>Virtual CFO support: financial reporting, planning and advisory</li>
+        <li>Suitable for startups, growing SMEs and companies scaling operations</li>
+      </ul>
+      <a class="svc-link" href="#contact">Explore Retainership →</a>
     </div>
   </div>
 </section>
 
-<section class="sw" id="why">
-  <div class="why-grid">
+<!-- SECTORS -->
+<section class="sw" id="sectors">
+  <div class="sh reveal center">
+    <span class="tag"><span class="line-gold"></span>Sectors</span>
+    <h2 class="h2">Industry Segments <em>We Regularly Advise</em></h2>
+  </div>
+  <div class="sector-grid">
+    <div class="sect-card reveal d1"><div class="sect-icon">🛒</div><div class="sect-name">Trading & Distribution</div><div class="sect-sub">GST compliance, stock records, purchase/sales reconciliation</div></div>
+    <div class="sect-card reveal d2"><div class="sect-icon">🏭</div><div class="sect-name">Manufacturing & MSME</div><div class="sect-sub">Cost records, payroll, PF/ESI, GST and income tax compliance</div></div>
+    <div class="sect-card reveal d3"><div class="sect-icon">💻</div><div class="sect-name">IT & Services</div><div class="sect-sub">Freelancer tax, GST on exports, payroll and company compliance</div></div>
+    <div class="sect-card reveal d4"><div class="sect-icon">🏗️</div><div class="sect-name">Real Estate & Construction</div><div class="sect-sub">GST on works contracts, TDS, project accounts and ROC filings</div></div>
+    <div class="sect-card reveal d1"><div class="sect-icon">🏥</div><div class="sect-name">Healthcare & Clinics</div><div class="sect-sub">Professional tax, TDS, GST applicability and payroll compliance</div></div>
+    <div class="sect-card reveal d2"><div class="sect-icon">🎓</div><div class="sect-name">Education & Training</div><div class="sect-sub">Accounting, trust/society compliance, GST registration advisory</div></div>
+    <div class="sect-card reveal d3"><div class="sect-icon">🚀</div><div class="sect-name">Startups & Early-stage</div><div class="sect-sub">Incorporation, DPIIT, compliance calendar and investor-ready accounts</div></div>
+    <div class="sect-card reveal d4"><div class="sect-icon">🛍️</div><div class="sect-name">E-Commerce</div><div class="sect-sub">TCS reconciliation, GST on marketplace sales, ITR for sellers</div></div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="sw" id="approach">
+  <div class="approach-grid">
     <div>
       <div class="reveal">
-        <span class="section-tag">Why Choose Us</span>
-        <h2 class="section-title">A Practical, Responsive and Compliance-Driven Approach</h2>
-        <p class="section-sub">We have kept the premium look of your uploaded site while rebuilding the messaging to sound more like an established consultancy firm and to better match client expectations in this market.</p>
+        <span class="tag"><span class="line-gold"></span>Our Methodology</span>
+        <h2 class="h2">A Structured, <em>Outcome-Driven</em><br>Engagement Model</h2>
+        <p class="sub" style="margin-top:1rem">Every client engagement follows a disciplined process — designed to deliver measurable compliance outcomes without delays, errors or ambiguity.</p>
       </div>
-      <div class="why-feats">
-        <div class="wf reveal d1"><div class="wf-icon">🎓</div><div class="wf-body"><h4>Experience Across Tax, Accounts and Statutory Areas</h4><p>Broad coverage across direct tax, indirect tax, accounting support, payroll and compliance coordination.</p></div></div>
-        <div class="wf reveal d2"><div class="wf-icon">🔄</div><div class="wf-body"><h4>Single Window Support</h4><p>Clients can manage multiple recurring requirements through one consulting relationship instead of multiple fragmented vendors.</p></div></div>
-        <div class="wf reveal d3"><div class="wf-icon">⏱️</div><div class="wf-body"><h4>Timely Execution & Follow-Up</h4><p>We focus on deadlines, filing cycles, documentation readiness and responsive communication throughout the engagement.</p></div></div>
-        <div class="wf reveal d4"><div class="wf-icon">🛡️</div><div class="wf-body"><h4>Professional Handling with Confidentiality</h4><p>Client information is handled with due care, and the engagement style is structured, reliable and business-oriented.</p></div></div>
-      </div>
-    </div>
-    <div class="reveal d2">
-      <div class="process-box">
-        <div class="pb-title">Our Engagement Process</div>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><div class="step-body"><h5>Requirement Understanding</h5><p>We understand the client’s requirement, business stage and immediate compliance priorities.</p></div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-body"><h5>Document Collection & Review</h5><p>Required details and documents are collected, checked and organised for proper execution.</p></div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-body"><h5>Processing & Filing Support</h5><p>Returns, records, payroll or statutory tasks are processed carefully with compliance timelines in mind.</p></div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-body"><h5>Closure, Reporting & Ongoing Support</h5><p>The client receives update status, filing completion support and continuing assistance wherever required.</p></div></div>
+      <div class="step-list">
+        <div class="s-step reveal d1">
+          <div class="s-num">01</div>
+          <div class="s-body"><h5>Discovery & Scope Definition</h5><p>We conduct a thorough review of the client's business, financial position, existing compliance status and immediate priorities — establishing a clear scope before any work begins.</p></div>
+        </div>
+        <div class="s-step reveal d2">
+          <div class="s-num">02</div>
+          <div class="s-body"><h5>Documentation & Data Collection</h5><p>A structured checklist is shared. All relevant financial records, statutory documents and prior filings are collected, validated and organised for accurate processing.</p></div>
+        </div>
+        <div class="s-step reveal d3">
+          <div class="s-num">03</div>
+          <div class="s-body"><h5>Execution & Quality Review</h5><p>Filings, reports, payroll runs or compliance tasks are processed against statutory timelines. A two-stage review ensures accuracy before any submission or delivery.</p></div>
+        </div>
+        <div class="s-step reveal d4">
+          <div class="s-num">04</div>
+          <div class="s-body"><h5>Client Communication & Continuity</h5><p>Clients receive timely status updates, filing confirmations and documentation. Ongoing engagements include a compliance calendar, proactive reminders and a dedicated advisory contact.</p></div>
         </div>
       </div>
     </div>
+    <div class="right-stack reveal d2">
+      <div class="rs-card"><div class="rs-icon">🎓</div><div class="rs-body"><h5>Multi-disciplinary Expertise</h5><p>Direct tax, indirect tax, labour law, corporate law and accounting — handled under one professional roof, eliminating coordination gaps across advisors.</p></div></div>
+      <div class="rs-card"><div class="rs-icon">⏱️</div><div class="rs-body"><h5>Deadline-Driven Execution</h5><p>We operate against a live compliance calendar. Filing deadlines, payment due dates and statutory milestones are tracked and executed proactively — never reactively.</p></div></div>
+      <div class="rs-card"><div class="rs-icon">🔐</div><div class="rs-body"><h5>Strict Confidentiality Standards</h5><p>All client financial data, corporate records and personal information are handled with professional confidentiality and stored securely throughout the engagement.</p></div></div>
+      <div class="rs-card"><div class="rs-icon">📞</div><div class="rs-body"><h5>Responsive, Accessible Advisory</h5><p>Clients reach us directly via phone or WhatsApp — no queues, no junior escalation chains. Senior-level responsiveness as a standard, not a premium.</p></div></div>
+      <div class="rs-card"><div class="rs-icon">📍</div><div class="rs-body"><h5>Deep Local Market Understanding</h5><p>Operating in Lucknow for over 8 years, we understand the regional compliance landscape, local business environment and UP-specific statutory requirements.</p></div></div>
+    </div>
   </div>
 </section>
 
+<!-- TRUST NUMBERS -->
 <section class="sw" id="trust">
-  <div class="sh center reveal">
-    <span class="section-tag">Professional Strengths</span>
-    <h2 class="section-title">What Makes the Firm Presentation Stronger</h2>
-    <p class="section-sub">These trust-building points were strengthened so the site reads with better credibility and stronger service clarity.</p>
+  <div class="sh reveal center">
+    <span class="tag"><span class="line-gold"></span>Why Clients Choose Us</span>
+    <h2 class="h2">Professional Standards That <em>Speak for Themselves</em></h2>
   </div>
-  <div class="trust-grid">
-    <div class="trust-card reveal d1"><div class="trust-icon">🏅</div><div class="trust-name">Broader Service Positioning</div><div class="trust-desc">The new copy now presents the firm as a wider compliance and advisory partner instead of a limited filing-only service provider.</div></div>
-    <div class="trust-card reveal d2"><div class="trust-icon">🧩</div><div class="trust-name">Clearer Service Segmentation</div><div class="trust-desc">Tax, GST, accounts, payroll, labour compliance, ROC and litigation are now grouped clearly for better client understanding.</div></div>
-    <div class="trust-card reveal d3"><div class="trust-icon">📍</div><div class="trust-name">Market-Relevant Positioning</div><div class="trust-desc">The site now speaks more like other established consultancy firms while preserving a premium design feel and local relevance.</div></div>
-    <div class="trust-card reveal d4"><div class="trust-icon">💬</div><div class="trust-name">Stronger Lead Conversion Readiness</div><div class="trust-desc">The messaging now supports enquiries for recurring services like payroll, PF, ESI and retainership in addition to tax filings.</div></div>
+  <div class="numbers-row reveal">
+    <div class="num-box"><div class="nb-val">8+</div><div class="nb-lbl">Years of Practice</div></div>
+    <div class="num-box"><div class="nb-val">500+</div><div class="nb-lbl">Engagements Delivered</div></div>
+    <div class="num-box"><div class="nb-val">12+</div><div class="nb-lbl">Service Verticals</div></div>
+    <div class="num-box"><div class="nb-val">Zero</div><div class="nb-lbl">Missed Filing Deadlines</div></div>
+  </div>
+  <div class="trust-cards">
+    <div class="t-card reveal d1"><div class="t-icon">🏅</div><div class="t-name">Full-Spectrum Coverage</div><div class="t-desc">From ITR filing to GST litigation to payroll to ROC compliance — a complete professional mandate managed through a single trusted advisory relationship.</div></div>
+    <div class="t-card reveal d2"><div class="t-icon">🧩</div><div class="t-name">Structured Retainership Model</div><div class="t-desc">Businesses engage us on a continuing basis, gaining access to organised compliance support, monthly reviews and a permanent advisory contact — at a fraction of in-house costs.</div></div>
+    <div class="t-card reveal d3"><div class="t-icon">📍</div><div class="t-name">Local Depth, Professional Standards</div><div class="t-desc">We combine the speed and accessibility of a local firm with the process discipline, documentation standards and advisory rigour expected from larger professional practices.</div></div>
   </div>
 </section>
 
-<section class="local-seo">
-  <div class="local-seo-in reveal">
+<!-- LOCAL SEO STRIP -->
+<div class="local-strip reveal">
+  <div class="local-in">
     <div>
-      <span class="section-tag">Lucknow Focus</span>
-      <h2 class="section-title">GST, ITR, Payroll and Compliance Services in Lucknow</h2>
-      <p class="section-sub">If a client is searching for GST filing, ITR filing, payroll services, PF / ESI compliance, accounting support, or ROC compliance in Lucknow, this section helps the website speak to that local search intent in a professional manner without making exaggerated claims.</p>
+      <span class="tag"><span class="line-gold"></span>Lucknow & UP Practice</span>
+      <h2 class="h2" style="font-size:clamp(1.6rem,2.8vw,2.2rem)">GST, ITR, Payroll and Compliance<br><em>Advisory in Lucknow, UP</em></h2>
+      <p class="sub" style="margin-top:1rem">For businesses and professionals in Lucknow seeking reliable, deadline-focused support for tax filing, accounting, payroll, PF/ESI, ROC or litigation — Verma Consultancy Services is your professional home.</p>
     </div>
-    <div class="local-seo-card">
-      <h3>Focused Local Service Positioning</h3>
-      <p>Verma Consultancy Services supports individuals, startups, SMEs and companies in Lucknow with practical solutions for tax filing, payroll, accounting, statutory compliance and notice-response requirements.</p>
+    <div class="local-card">
+      <h3>Our Coverage Area</h3>
+      <p>We serve clients across Lucknow, Kanpur, Varanasi, Agra, Prayagraj and the broader UP market. Remote and hybrid engagements are available for businesses operating pan-India with UP statutory requirements.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section class="cta-band">
+<!-- CTA BAND -->
+<div class="cta-band">
   <div class="reveal">
-    <h2>Need Support with Tax, Payroll or Compliance?</h2>
-    <p>Whether your requirement is a single filing, monthly payroll support, PF / ESI compliance, accounting assistance or ongoing retainership, we are ready to discuss the right solution.</p>
-    <div class="btn-group">
-      <a href="tel:+918707401846" class="btn-primary">📞 Call Now: 87074 01846</a>
-      <a href="https://wa.me/918707401846?text=Hi%20I%20want%20to%20discuss%20tax%2C%20payroll%20or%20compliance%20services." class="btn-secondary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+    <h2>Ready to Elevate Your Compliance Function?</h2>
+    <p>Whether your requirement is a one-time filing, a structured retainership, or professional support for a pending dispute — we are prepared to help. The first consultation is complimentary.</p>
+    <div class="btn-grp" style="justify-content:center">
+      <a href="tel:+918707401846" class="btn-p">Call +91 87074 01846</a>
+      <a href="https://wa.me/918707401846?text=Hi%2C%20I%20would%20like%20to%20discuss%20a%20compliance%20or%20advisory%20requirement." target="_blank" rel="noopener" class="btn-s">WhatsApp Us →</a>
     </div>
   </div>
-</section>
+</div>
 
+<!-- CONTACT -->
 <section class="sw" id="contact">
   <div class="contact-grid">
     <div>
       <div class="reveal">
-        <span class="section-tag">Contact Us</span>
-        <h2 class="section-title">Let’s Start Your Consultation</h2>
-        <p class="section-sub">Share your requirement and we will get back with the appropriate service route, whether it is tax filing, payroll support, PF / ESI compliance, accounting assistance, ROC compliance or notice-response support.</p>
+        <span class="tag"><span class="line-gold"></span>Contact</span>
+        <h2 class="h2">Begin Your <em>Advisory Engagement</em></h2>
+        <p class="sub" style="margin-top:1rem">Share your requirement and a member of our team will respond within one business day with a clear outline of how we can assist.</p>
       </div>
-      <div class="contact-items">
-        <div class="c-item reveal d1"><div class="c-icon">📞</div><div><h4>Phone / WhatsApp</h4><p><a href="tel:+918707401846">+91 87074 01846</a></p></div></div>
-        <div class="c-item reveal d2"><div class="c-icon">✉️</div><div><h4>Email</h4><p><a href="mailto:svtiger543939@gmail.com">svtiger543939@gmail.com</a></p></div></div>
-        <div class="c-item reveal d3"><div class="c-icon">🕐</div><div><h4>Working Hours</h4><p>Monday – Saturday: 10:00 AM – 7:00 PM</p></div></div>
-        <div class="c-item reveal d4"><div class="c-icon">📍</div><div><h4>Location</h4><p>Lucknow, Uttar Pradesh, India</p></div></div>
+      <div class="c-items">
+        <div class="c-row reveal d1">
+          <div class="c-ico">📞</div>
+          <div><div class="c-lbl">Phone / WhatsApp</div><div class="c-val"><a href="tel:+918707401846">+91 87074 01846</a></div></div>
+        </div>
+        <div class="c-row reveal d2">
+          <div class="c-ico">✉️</div>
+          <div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:svtiger543939@gmail.com">svtiger543939@gmail.com</a></div></div>
+        </div>
+        <div class="c-row reveal d3">
+          <div class="c-ico">🕐</div>
+          <div><div class="c-lbl">Office Hours</div><div class="c-val">Monday – Saturday: 10:00 AM – 7:00 PM</div></div>
+        </div>
+        <div class="c-row reveal d4">
+          <div class="c-ico">📍</div>
+          <div><div class="c-lbl">Location</div><div class="c-val">Lucknow, Uttar Pradesh, India</div></div>
+        </div>
       </div>
     </div>
     <div class="reveal d2">
-      <div class="cf-box">
-        <div class="cf-title">Send Us a Message</div>
-        <div class="cf-sub">Fill in the form below. Your enquiry will be sent directly to our email and WhatsApp.</div>
-        <div class="form-row">
-          <div class="fg"><label>First Name</label><input type="text" placeholder="Rajesh"></div>
-          <div class="fg"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
+      <div class="form-box">
+        <div class="form-title">Send an Enquiry</div>
+        <div class="form-sub">Your submission is directed to our email and WhatsApp. We treat all enquiries with complete confidentiality.</div>
+        <div class="f-row">
+          <div class="fg"><label>First Name</label><input type="text" id="fn" placeholder="Rajesh"></div>
+          <div class="fg"><label>Last Name</label><input type="text" id="ln" placeholder="Sharma"></div>
         </div>
-        <div class="fg"><label>Mobile Number</label><input type="tel" placeholder="+91 98765 43210"></div>
-        <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+        <div class="fg"><label>Mobile Number</label><input type="tel" id="mob" placeholder="+91 98765 43210"></div>
+        <div class="fg"><label>Email Address</label><input type="email" id="em" placeholder="your@email.com"></div>
         <div class="fg">
           <label>Service Required</label>
-          <select>
-            <option value="">Select a service...</option>
+          <select id="svc">
+            <option value="">Select a service area...</option>
             <option>Income Tax Return Filing</option>
             <option>GST Filing / Registration</option>
             <option>Accounting / Bookkeeping</option>
             <option>Payroll Processing</option>
             <option>PF Compliance</option>
             <option>ESI Compliance</option>
-            <option>ROC Compliance</option>
-            <option>Audit Support</option>
+            <option>ROC / Corporate Compliance</option>
+            <option>Tax Audit Support</option>
             <option>GST Litigation</option>
             <option>Income Tax Litigation</option>
             <option>Monthly Retainership</option>
+            <option>Virtual CFO Advisory</option>
+            <option>Other / General Enquiry</option>
           </select>
         </div>
-        <div class="fg"><label>Your Message</label><textarea placeholder="Briefly describe your requirement..."></textarea></div>
-        <button class="form-btn" onclick="submitForm()">Submit Enquiry →</button>
-        <p class="form-note">🔒 Your information remains confidential. We aim to respond promptly.</p>
+        <div class="fg"><label>Your Requirement</label><textarea id="msg" placeholder="Briefly describe your requirement or the matter you need assistance with..."></textarea></div>
+        <button class="f-btn" onclick="submitForm()">Submit Enquiry</button>
+        <p class="f-note">🔒 All information shared is treated with strict professional confidentiality.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <div class="logo-mark" style="width:36px;height:36px;font-size:1rem;">V</div>
-    <div class="logo-words">
-      <strong>Verma Consultancy Services</strong>
-      <div class="footer-copy">© 2026 <strong>Verma Consultancy Services</strong>. All rights reserved.</div>
-    </div>
+  <div class="f-brand">
+    <strong>Verma Consultancy Services</strong>
+    <span>Tax · Audit · Advisory · Compliance</span>
   </div>
-  <div class="footer-links">
+  <div class="f-links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
+    <a href="#approach">Approach</a>
     <a href="#contact">Contact</a>
   </div>
-  <div class="footer-contact">
-    <a href="tel:+918707401846">📞 +91 87074 01846</a><br>
-    <span style="font-size:.74rem;margin-top:.3rem;display:block;">Lucknow · Mon–Sat · 10 AM – 7 PM</span>
+  <div class="f-right">
+    <div class="f-ph"><a href="tel:+918707401846" style="color:var(--gold)">+91 87074 01846</a></div>
+    <div class="f-copy">© 2026 Verma Consultancy Services. All rights reserved.<br>Lucknow, Uttar Pradesh, India.</div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/918707401846?text=Hi%20I%20want%20to%20know%20more%20about%20your%20consultancy%20services." target="_blank" rel="noopener" title="Chat on WhatsApp">💬</a>
+<!-- WHATSAPP FLOAT -->
+<a class="wa-btn" href="https://wa.me/918707401846?text=Hi%2C%20I%20would%20like%20to%20discuss%20a%20professional%20advisory%20requirement." target="_blank" rel="noopener" title="Chat on WhatsApp" aria-label="WhatsApp">💬</a>
 
+<!-- SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "AccountingService",
   "name": "Verma Consultancy Services",
   "telephone": "+918707401846",
+  "email": "svtiger543939@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Lucknow",
     "addressRegion": "UP",
     "addressCountry": "India"
   },
-  "areaServed": "Lucknow",
+  "areaServed": ["Lucknow","Kanpur","Varanasi","Agra","Prayagraj","Uttar Pradesh"],
   "serviceType": [
-    "Income Tax Return Filing",
-    "GST Filing",
-    "GST Registration",
-    "Accounting and Bookkeeping",
-    "Payroll Processing",
-    "PF Compliance",
-    "ESI Compliance",
-    "ROC Compliance",
-    "Audit Support",
-    "GST Litigation",
-    "Income Tax Litigation"
+    "Income Tax Return Filing","GST Filing","GST Registration","Accounting","Bookkeeping",
+    "Payroll Processing","PF Compliance","ESI Compliance","ROC Compliance",
+    "Tax Audit","GST Litigation","Income Tax Litigation","Business Retainership"
   ]
 }
 </script>
 
 <script>
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
+// Nav scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
 });
-const io=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
-},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-function submitForm(){
-  // Collect form values
-  var inputs = document.querySelectorAll('#contact input, #contact select, #contact textarea');
-  var firstName = inputs[0] ? inputs[0].value.trim() : '';
-  var lastName  = inputs[1] ? inputs[1].value.trim() : '';
-  var mobile    = inputs[2] ? inputs[2].value.trim() : '';
-  var email     = inputs[3] ? inputs[3].value.trim() : '';
-  var service   = inputs[4] ? inputs[4].value.trim() : '';
-  var message   = inputs[5] ? inputs[5].value.trim() : '';
 
-  if(!firstName && !mobile && !message){
-    alert('Please fill in at least your name, mobile number and message before submitting.');
+// Reveal on scroll
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Form submit — email + WhatsApp
+function submitForm() {
+  var fn  = document.getElementById('fn').value.trim();
+  var ln  = document.getElementById('ln').value.trim();
+  var mob = document.getElementById('mob').value.trim();
+  var em  = document.getElementById('em').value.trim();
+  var svc = document.getElementById('svc').value.trim();
+  var msg = document.getElementById('msg').value.trim();
+
+  if (!fn && !mob && !msg) {
+    alert('Please fill in at least your name, mobile number and requirement before submitting.');
     return;
   }
 
-  var fullName = (firstName + ' ' + lastName).trim();
+  var name = (fn + ' ' + ln).trim();
 
-  // --- 1. Open mailto link (sends to your email) ---
-  var emailSubject = encodeURIComponent('New Enquiry from Website – ' + (fullName || 'Visitor'));
-  var emailBody = encodeURIComponent(
-    'Name: ' + (fullName || 'Not provided') + '\n' +
-    'Mobile: ' + (mobile || 'Not provided') + '\n' +
-    'Email: ' + (email || 'Not provided') + '\n' +
-    'Service Required: ' + (service || 'Not specified') + '\n\n' +
-    'Message:\n' + (message || 'No message')
+  // Email
+  var subj = encodeURIComponent('New Advisory Enquiry — ' + (name || 'Website Visitor'));
+  var body = encodeURIComponent(
+    'Name: ' + (name || '—') + '\n' +
+    'Mobile: ' + (mob || '—') + '\n' +
+    'Email: ' + (em || '—') + '\n' +
+    'Service Area: ' + (svc || '—') + '\n\n' +
+    'Requirement:\n' + (msg || '—')
   );
-  window.open('mailto:svtiger543939@gmail.com?subject=' + emailSubject + '&body=' + emailBody, '_blank');
+  window.open('mailto:svtiger543939@gmail.com?subject=' + subj + '&body=' + body, '_blank');
 
-  // --- 2. Open WhatsApp with enquiry details ---
-  var waText = encodeURIComponent(
-    '📋 *New Website Enquiry*\n\n' +
-    '👤 *Name:* ' + (fullName || 'Not provided') + '\n' +
-    '📱 *Mobile:* ' + (mobile || 'Not provided') + '\n' +
-    '📧 *Email:* ' + (email || 'Not provided') + '\n' +
-    '🔧 *Service:* ' + (service || 'Not specified') + '\n\n' +
-    '💬 *Message:*\n' + (message || 'No message')
+  // WhatsApp
+  var wa = encodeURIComponent(
+    '📋 *New Website Enquiry — Verma Consultancy*\n\n' +
+    '👤 *Name:* ' + (name || '—') + '\n' +
+    '📱 *Mobile:* ' + (mob || '—') + '\n' +
+    '📧 *Email:* ' + (em || '—') + '\n' +
+    '🔧 *Service:* ' + (svc || '—') + '\n\n' +
+    '💬 *Requirement:*\n' + (msg || '—')
   );
-  setTimeout(function(){
-    window.open('https://wa.me/918707401846?text=' + waText, '_blank');
-  }, 500);
+  setTimeout(() => { window.open('https://wa.me/918707401846?text=' + wa, '_blank'); }, 500);
 
-  alert('✅ Thank you, ' + (firstName || 'there') + '!\n\nYour enquiry is being sent to our email and WhatsApp. We will get back to you shortly.\n\n— Verma Consultancy Services');
+  alert('Thank you, ' + (fn || 'there') + '.\n\nYour enquiry has been submitted to our email and WhatsApp. We will respond within one business day.\n\n— Verma Consultancy Services');
 }
-document.querySelectorAll('a[href*="wa.me"]').forEach(link=>{
-  link.addEventListener('click',()=>{ console.log('WhatsApp lead clicked'); });
-});
 </script>
 </body>
 </html>
