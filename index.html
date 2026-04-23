@@ -341,13 +341,13 @@ footer{background:var(--ink-mid);border-top:1px solid var(--ink-line);padding:3r
 </nav>
 
 <div class="mob-menu" id="mm">
-  <span class="mob-close" onclick="document.getElementById('mm').classList.remove('open')">✕</span>
-  <a href="#home" onclick="document.getElementById('mm').classList.remove('open')">Home</a>
-  <a href="#about" onclick="document.getElementById('mm').classList.remove('open')">About</a>
-  <a href="#services" onclick="document.getElementById('mm').classList.remove('open')">Services</a>
-  <a href="#approach" onclick="document.getElementById('mm').classList.remove('open')">Approach</a>
-  <a href="#updates" onclick="document.getElementById('mm').classList.remove('open')">Updates</a>
-  <a href="#contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
+  <span class="mob-close" onclick="closeMobMenu()">✕</span>
+  <a href="#home" onclick="closeMobMenu()">Home</a>
+  <a href="#about" onclick="closeMobMenu()">About</a>
+  <a href="#services" onclick="closeMobMenu()">Services</a>
+  <a href="#approach" onclick="closeMobMenu()">Approach</a>
+  <a href="#updates" onclick="closeMobMenu()">Updates</a>
+  <a href="#contact" onclick="closeMobMenu()">Contact</a>
   <a href="tel:+918707401846" style="color:var(--gold);font-size:1rem;">+91 87074 01846</a>
 </div>
 
@@ -847,6 +847,17 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+// ── MOBILE MENU ──
+function closeMobMenu() {
+  // Small delay lets the browser register the href before hiding the menu
+  setTimeout(() => { document.getElementById('mm').classList.remove('open'); }, 80);
+}
+
+// Close menu if user taps outside it
+document.getElementById('mm').addEventListener('click', function(e) {
+  if (e.target === this) closeMobMenu();
+});
+
 // ── REGULATORY UPDATES ENGINE ──
 let allUpdates = [];
 let activeFilter = 'all';
@@ -910,49 +921,96 @@ async function fetchUpdates() {
   skel.style.display = 'grid';
   grid.style.display = 'none';
 
-  const today = new Date().toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' });
+  // Compute date range: today and 30 days ago
+  const now = new Date();
+  const monthAgo = new Date(now);
+  monthAgo.setDate(now.getDate() - 30);
+  const fmt = d => d.toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' });
+  const todayStr   = fmt(now);
+  const monthAgoStr = fmt(monthAgo);
 
-  const prompt = `Today is ${today}. You are a senior Indian tax and compliance analyst. Search the web and find the LATEST 9 regulatory updates from the past 60 days across these areas: GST, Income Tax, ROC/MCA, PF/EPFO, ESI/ESIC, and Union Budget.
+  const systemPrompt = `You are a senior Indian tax and statutory compliance analyst. Your job is to search the web for the most recent official regulatory updates and return them as a clean JSON array. Always search for updates published between ${monthAgoStr} and ${todayStr}. Be specific — include circular numbers, notification numbers, due dates and rates where available. Never make up updates; only report what you find via web search.`;
 
-For each update, provide:
-- title: A concise professional headline (max 12 words)
-- category: ONE of exactly: "GST", "Income Tax", "ROC", "PF", "ESI", "Budget", "Other"
-- date: The date of announcement/notification (e.g. "15 April 2025")
-- summary: 2-3 sentences explaining what changed, what was notified, or what deadline was announced. Be specific — include circular numbers, notification numbers, or rates where relevant.
-- impact: 1 sentence on practical business/taxpayer impact
-- source: The official body (e.g. "CBIC Circular", "CBDT Notification", "MCA General Circular", "EPFO Circular")
+  const userPrompt = `Search the web right now for the latest Indian regulatory updates published between ${monthAgoStr} and ${todayStr} across: GST (CBIC circulars, notifications, rate changes, return due dates), Income Tax (CBDT notifications, ITR forms, TDS changes, deadlines), ROC/MCA (company law circulars, filing deadlines, MCA21), PF/EPFO (wage ceiling, ECR, contribution), ESI/ESIC (contribution rates, coverage), and Union Budget updates.
 
-Return ONLY a valid JSON array of 9 objects with keys: title, category, date, summary, impact, source. No markdown, no explanation, just the JSON array.`;
+Find at least 9 real updates. For each, return:
+- title: concise headline max 12 words
+- category: exactly one of "GST", "Income Tax", "ROC", "PF", "ESI", "Budget", "Other"
+- date: actual date of the notification/circular/announcement
+- summary: 2-3 specific sentences — include circular/notification number, rate, or deadline where relevant
+- impact: 1 sentence of practical business impact
+- source: official body e.g. "CBIC Notification No. XX/2025", "CBDT Circular", "MCA General Circular", "EPFO Circular"
+
+Respond with ONLY a valid JSON array. No markdown fences, no explanation, no preamble. Start your response with [ and end with ].`;
+
+  const tools = [{ type: 'web_search_20250305', name: 'web_search' }];
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    // ── Turn 1: send user prompt with web search tool ──
+    const res1 = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-        messages: [{ role: 'user', content: prompt }]
+        max_tokens: 4000,
+        system: systemPrompt,
+        tools: tools,
+        messages: [{ role: 'user', content: userPrompt }]
       })
     });
+    const data1 = await res1.json();
 
-    const data = await res.json();
-
-    // Extract text from response — Claude may use tool_use then respond
+    // Check if Claude used tools (stop_reason = 'tool_use')
     let rawText = '';
-    if (data.content) {
-      for (const block of data.content) {
+
+    if (data1.stop_reason === 'tool_use') {
+      // ── Turn 2: send tool results back so Claude can produce final answer ──
+      // Collect all tool_use blocks as tool_result blocks
+      const toolResults = (data1.content || [])
+        .filter(b => b.type === 'tool_use')
+        .map(b => ({
+          type: 'tool_result',
+          tool_use_id: b.id,
+          content: b.input ? JSON.stringify(b.input) : 'Search completed.'
+        }));
+
+      const messages2 = [
+        { role: 'user',      content: userPrompt },
+        { role: 'assistant', content: data1.content },
+        { role: 'user',      content: toolResults.length > 0 ? toolResults : [{ type: 'text', text: 'Please now compile and return the JSON array of updates based on your search results.' }] }
+      ];
+
+      const res2 = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 4000,
+          system: systemPrompt,
+          tools: tools,
+          messages: messages2
+        })
+      });
+      const data2 = await res2.json();
+      for (const block of (data2.content || [])) {
+        if (block.type === 'text') rawText += block.text;
+      }
+    } else {
+      // Claude answered directly without tool use
+      for (const block of (data1.content || [])) {
         if (block.type === 'text') rawText += block.text;
       }
     }
 
-    // Parse JSON from response
+    // ── Parse JSON array from response ──
     let updates = [];
+    // Strip markdown fences if present
+    rawText = rawText.replace(/```json|```/g, '').trim();
     const jsonMatch = rawText.match(/\[[\s\S]*\]/);
     if (jsonMatch) {
       updates = JSON.parse(jsonMatch[0]);
     } else {
-      throw new Error('No JSON array found in response');
+      throw new Error('No JSON array in response');
     }
 
     allUpdates = updates;
@@ -964,8 +1022,8 @@ Return ONLY a valid JSON array of 9 objects with keys: title, category, date, su
     grid.style.display = 'block';
     grid.innerHTML = `<div class="upd-error" style="grid-column:1/-1">
       <div class="upd-error-icon">⚠️</div>
-      <p style="margin-bottom:.8rem">Unable to fetch live updates right now.</p>
-      <button class="upd-refresh-btn" onclick="fetchUpdates()" style="margin:0 auto">Try Again</button>
+      <p style="margin-bottom:.8rem">Unable to fetch live updates right now. Please try again.</p>
+      <button class="upd-refresh-btn" onclick="fetchUpdates()" style="margin:0 auto">↻ Try Again</button>
     </div>`;
   } finally {
     btn.classList.remove('spinning');
