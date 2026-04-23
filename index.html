@@ -266,15 +266,50 @@ footer{background:var(--ink-mid);border-top:1px solid var(--ink-line);padding:3r
   .nav-links,.nav-ph{display:none}
   .hamburger{display:flex}
 }
-@media(max-width:600px){
-  .svc-grid{grid-template-columns:1fr}
-  .trust-cards,.sector-grid,.numbers-row{grid-template-columns:1fr}
-  .f-row{grid-template-columns:1fr}
-  .sw{padding:4.5rem 5%}
-  .who,.local-strip{padding:2.5rem 5%}
-  nav{padding:1rem 5%}
-  nav.scrolled{padding:.9rem 5%}
-}
+/* ── REGULATORY UPDATES ── */
+#updates{background:var(--ink-mid)}
+.upd-header{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.upd-live{display:inline-flex;align-items:center;gap:8px;padding:.3rem .9rem;border:1px solid rgba(46,194,122,.25);border-radius:50px;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#2ec27a;background:rgba(46,194,122,.07)}
+.upd-live-dot{width:7px;height:7px;border-radius:50%;background:#2ec27a;animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.upd-refresh-btn{display:inline-flex;align-items:center;gap:6px;padding:.5rem 1.2rem;border:1px solid var(--gold-bdr);border-radius:4px;font-size:.75rem;font-weight:600;color:var(--gold);background:transparent;cursor:pointer;transition:all .2s;letter-spacing:.05em}
+.upd-refresh-btn:hover{background:var(--gold-dim);border-color:var(--gold)}
+.upd-refresh-btn.spinning svg{animation:spin .8s linear infinite}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.upd-filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2rem}
+.upd-filter{padding:.35rem .9rem;border:1px solid var(--ink-line);border-radius:50px;font-size:.73rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s;letter-spacing:.04em;background:transparent}
+.upd-filter.active,.upd-filter:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+.upd-skeleton{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.skel-card{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:1.6rem;display:flex;flex-direction:column;gap:.8rem}
+.skel-line{height:10px;border-radius:4px;background:linear-gradient(90deg,rgba(255,255,255,.05) 25%,rgba(255,255,255,.1) 50%,rgba(255,255,255,.05) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite}
+@keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+.skel-line.w80{width:80%}.skel-line.w60{width:60%}.skel-line.w90{width:90%}.skel-line.w50{width:50%}.skel-line.tall{height:60px}
+.upd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.upd-card{background:var(--ink-card);border:1px solid var(--ink-line);border-radius:6px;padding:1.6rem;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;gap:.7rem;cursor:default}
+.upd-card:hover{border-color:var(--gold-bdr);transform:translateY(-3px)}
+.upd-card-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.upd-badge{padding:.22rem .7rem;border-radius:50px;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.badge-gst{background:rgba(59,130,246,.12);color:#60a5fa;border:1px solid rgba(59,130,246,.2)}
+.badge-it{background:rgba(168,85,247,.12);color:#c084fc;border:1px solid rgba(168,85,247,.2)}
+.badge-roc{background:rgba(245,158,11,.12);color:#fbbf24;border:1px solid rgba(245,158,11,.2)}
+.badge-pf{background:rgba(16,185,129,.12);color:#34d399;border:1px solid rgba(16,185,129,.2)}
+.badge-esi{background:rgba(239,68,68,.12);color:#f87171;border:1px solid rgba(239,68,68,.2)}
+.badge-budget{background:rgba(201,170,92,.12);color:var(--gold);border:1px solid var(--gold-bdr)}
+.badge-other{background:rgba(138,143,160,.12);color:var(--muted);border:1px solid rgba(138,143,160,.2)}
+.upd-date{font-size:.65rem;color:var(--muted);letter-spacing:.06em}
+.upd-title{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--white);line-height:1.35}
+.upd-summary{font-size:.8rem;color:var(--muted);line-height:1.75;flex:1}
+.upd-impact{margin-top:.3rem;padding:.6rem .9rem;background:rgba(201,170,92,.06);border-left:2px solid var(--gold);border-radius:0 4px 4px 0;font-size:.76rem;color:rgba(245,243,238,.7);line-height:1.65}
+.upd-impact strong{color:var(--gold);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.2rem}
+.upd-error{text-align:center;padding:3rem;color:var(--muted);font-size:.9rem}
+.upd-error-icon{font-size:2rem;margin-bottom:.8rem}
+.upd-meta{display:flex;align-items:center;gap:.5rem;font-size:.65rem;color:var(--muted);margin-top:.3rem;padding-top:.6rem;border-top:1px solid var(--ink-line)}
+.upd-powered{display:flex;align-items:center;justify-content:flex-end;gap:.5rem;margin-top:1.5rem;font-size:.65rem;color:var(--muted);letter-spacing:.06em}
+.upd-powered span{color:var(--gold)}
+@media(max-width:1000px){.upd-grid,.upd-skeleton{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.upd-grid,.upd-skeleton{grid-template-columns:1fr}.upd-header{flex-direction:column}}
+
+
 </style>
 </head>
 <body>
@@ -293,6 +328,7 @@ footer{background:var(--ink-mid);border-top:1px solid var(--ink-line);padding:3r
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#approach">Approach</a></li>
+    <li><a href="#updates">Updates</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -310,6 +346,7 @@ footer{background:var(--ink-mid);border-top:1px solid var(--ink-line);padding:3r
   <a href="#about" onclick="document.getElementById('mm').classList.remove('open')">About</a>
   <a href="#services" onclick="document.getElementById('mm').classList.remove('open')">Services</a>
   <a href="#approach" onclick="document.getElementById('mm').classList.remove('open')">Approach</a>
+  <a href="#updates" onclick="document.getElementById('mm').classList.remove('open')">Updates</a>
   <a href="#contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
   <a href="tel:+918707401846" style="color:var(--gold);font-size:1rem;">+91 87074 01846</a>
 </div>
@@ -619,6 +656,48 @@ footer{background:var(--ink-mid);border-top:1px solid var(--ink-line);padding:3r
   </div>
 </section>
 
+<!-- REGULATORY UPDATES -->
+<section class="sw" id="updates">
+  <div class="upd-header">
+    <div>
+      <span class="tag"><span class="line-gold"></span>Regulatory Intelligence</span>
+      <h2 class="h2">Latest Updates in <em>Tax, GST, ROC & Labour Law</em></h2>
+      <p class="sub" style="margin-top:.8rem">AI-powered live feed — automatically sourced and summarised from official circulars, notifications and government releases.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.8rem;padding-top:.5rem">
+      <div class="upd-live"><span class="upd-live-dot"></span>Auto-Updated</div>
+      <button class="upd-refresh-btn" id="refreshBtn" onclick="fetchUpdates()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0018.49 15"/></svg>
+        Refresh Updates
+      </button>
+    </div>
+  </div>
+
+  <div class="upd-filters" id="updFilters">
+    <button class="upd-filter active" data-cat="all" onclick="filterUpdates(this,'all')">All Updates</button>
+    <button class="upd-filter" data-cat="GST" onclick="filterUpdates(this,'GST')">GST</button>
+    <button class="upd-filter" data-cat="Income Tax" onclick="filterUpdates(this,'Income Tax')">Income Tax</button>
+    <button class="upd-filter" data-cat="ROC" onclick="filterUpdates(this,'ROC')">ROC / MCA</button>
+    <button class="upd-filter" data-cat="PF" onclick="filterUpdates(this,'PF')">PF / EPFO</button>
+    <button class="upd-filter" data-cat="ESI" onclick="filterUpdates(this,'ESI')">ESI</button>
+    <button class="upd-filter" data-cat="Budget" onclick="filterUpdates(this,'Budget')">Budget</button>
+  </div>
+
+  <div id="updatesContainer">
+    <!-- Skeleton loader shown on first load -->
+    <div class="upd-skeleton" id="updSkeleton">
+      <div class="skel-card"><div class="skel-line w50"></div><div class="skel-line w80"></div><div class="skel-line tall"></div><div class="skel-line w60"></div></div>
+      <div class="skel-card"><div class="skel-line w50"></div><div class="skel-line w90"></div><div class="skel-line tall"></div><div class="skel-line w60"></div></div>
+      <div class="skel-card"><div class="skel-line w50"></div><div class="skel-line w80"></div><div class="skel-line tall"></div><div class="skel-line w60"></div></div>
+      <div class="skel-card"><div class="skel-line w50"></div><div class="skel-line w90"></div><div class="skel-line tall"></div><div class="skel-line w50"></div></div>
+      <div class="skel-card"><div class="skel-line w50"></div><div class="skel-line w80"></div><div class="skel-line tall"></div><div class="skel-line w60"></div></div>
+      <div class="skel-card"><div class="skel-line w50"></div><div class="skel-line w90"></div><div class="skel-line tall"></div><div class="skel-line w50"></div></div>
+    </div>
+    <div class="upd-grid" id="updGrid" style="display:none"></div>
+  </div>
+  <div class="upd-powered">Powered by <span>Verma AI Intelligence</span> · Updates sourced via live web search</div>
+</section>
+
 <!-- LOCAL SEO STRIP -->
 <div class="local-strip reveal">
   <div class="local-in">
@@ -768,7 +847,144 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// Form submit — email + WhatsApp
+// ── REGULATORY UPDATES ENGINE ──
+let allUpdates = [];
+let activeFilter = 'all';
+
+const BADGE_MAP = {
+  'GST':          'badge-gst',
+  'Income Tax':   'badge-it',
+  'ROC':          'badge-roc',
+  'PF':           'badge-pf',
+  'ESI':          'badge-esi',
+  'Budget':       'badge-budget',
+  'Other':        'badge-other'
+};
+
+function getBadgeClass(cat) {
+  return BADGE_MAP[cat] || 'badge-other';
+}
+
+function renderUpdates(updates) {
+  const grid = document.getElementById('updGrid');
+  const skel = document.getElementById('updSkeleton');
+  if (!updates || updates.length === 0) {
+    skel.style.display = 'none';
+    grid.style.display = 'block';
+    grid.innerHTML = `<div class="upd-error" style="grid-column:1/-1"><div class="upd-error-icon">📭</div><p>No updates found for this category right now. Try refreshing or check back later.</p></div>`;
+    return;
+  }
+  const filtered = activeFilter === 'all' ? updates : updates.filter(u => u.category === activeFilter);
+  skel.style.display = 'none';
+  grid.style.display = 'grid';
+  grid.innerHTML = filtered.map(u => `
+    <div class="upd-card">
+      <div class="upd-card-top">
+        <span class="upd-badge ${getBadgeClass(u.category)}">${u.category}</span>
+        <span class="upd-date">${u.date || ''}</span>
+      </div>
+      <div class="upd-title">${u.title}</div>
+      <div class="upd-summary">${u.summary}</div>
+      ${u.impact ? `<div class="upd-impact"><strong>Business Impact</strong>${u.impact}</div>` : ''}
+      <div class="upd-meta">📌 ${u.source || 'Official Source'}</div>
+    </div>
+  `).join('');
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="upd-error" style="grid-column:1/-1"><div class="upd-error-icon">🔍</div><p>No updates in this category currently. Select "All Updates" or try another category.</p></div>`;
+  }
+}
+
+function filterUpdates(el, cat) {
+  activeFilter = cat;
+  document.querySelectorAll('.upd-filter').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderUpdates(allUpdates);
+}
+
+async function fetchUpdates() {
+  const btn = document.getElementById('refreshBtn');
+  const skel = document.getElementById('updSkeleton');
+  const grid = document.getElementById('updGrid');
+  btn.classList.add('spinning');
+  btn.disabled = true;
+  skel.style.display = 'grid';
+  grid.style.display = 'none';
+
+  const today = new Date().toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' });
+
+  const prompt = `Today is ${today}. You are a senior Indian tax and compliance analyst. Search the web and find the LATEST 9 regulatory updates from the past 60 days across these areas: GST, Income Tax, ROC/MCA, PF/EPFO, ESI/ESIC, and Union Budget.
+
+For each update, provide:
+- title: A concise professional headline (max 12 words)
+- category: ONE of exactly: "GST", "Income Tax", "ROC", "PF", "ESI", "Budget", "Other"
+- date: The date of announcement/notification (e.g. "15 April 2025")
+- summary: 2-3 sentences explaining what changed, what was notified, or what deadline was announced. Be specific — include circular numbers, notification numbers, or rates where relevant.
+- impact: 1 sentence on practical business/taxpayer impact
+- source: The official body (e.g. "CBIC Circular", "CBDT Notification", "MCA General Circular", "EPFO Circular")
+
+Return ONLY a valid JSON array of 9 objects with keys: title, category, date, summary, impact, source. No markdown, no explanation, just the JSON array.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    const data = await res.json();
+
+    // Extract text from response — Claude may use tool_use then respond
+    let rawText = '';
+    if (data.content) {
+      for (const block of data.content) {
+        if (block.type === 'text') rawText += block.text;
+      }
+    }
+
+    // Parse JSON from response
+    let updates = [];
+    const jsonMatch = rawText.match(/\[[\s\S]*\]/);
+    if (jsonMatch) {
+      updates = JSON.parse(jsonMatch[0]);
+    } else {
+      throw new Error('No JSON array found in response');
+    }
+
+    allUpdates = updates;
+    renderUpdates(allUpdates);
+
+  } catch (err) {
+    console.error('Updates fetch error:', err);
+    skel.style.display = 'none';
+    grid.style.display = 'block';
+    grid.innerHTML = `<div class="upd-error" style="grid-column:1/-1">
+      <div class="upd-error-icon">⚠️</div>
+      <p style="margin-bottom:.8rem">Unable to fetch live updates right now.</p>
+      <button class="upd-refresh-btn" onclick="fetchUpdates()" style="margin:0 auto">Try Again</button>
+    </div>`;
+  } finally {
+    btn.classList.remove('spinning');
+    btn.disabled = false;
+  }
+}
+
+// Auto-fetch on page load when updates section is near viewport
+const updObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      fetchUpdates();
+      updObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05 });
+const updSection = document.getElementById('updates');
+if (updSection) updObserver.observe(updSection);
+
 function submitForm() {
   var fn  = document.getElementById('fn').value.trim();
   var ln  = document.getElementById('ln').value.trim();
